@@ -1,0 +1,14 @@
+syntax:glob
+
+Music/*
+dev/*
+Library/*
+Downloads/*
+.netbeans*
+Traktor3/*
+Pictures/*
+Documents/*
+Desktop/*
+Public/*
+Sites/*
+.Trash/*
