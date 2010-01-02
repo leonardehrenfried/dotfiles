@@ -12,3 +12,5 @@ Desktop/*
 Public/*
 Sites/*
 .Trash/*
+*.pyc
+bin/android-sdk/*
