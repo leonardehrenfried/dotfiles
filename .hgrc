@@ -3,3 +3,7 @@ username = Lenni <leonard.ehrenfried@web.de>
 
 [extensions]
 color=
+
+[alias]
+findrenames=addremove -s 100
+latest = log --limit 5

@@ -14,3 +14,4 @@ Sites/*
 .Trash/*
 *.pyc
 bin/android-sdk/*
+.m2/**.*
