@@ -112,7 +112,7 @@ def main():
                       help="SMTP password (or your GMail password)", metavar="PASS")
                       
     parser.add_option("-s", "--subject", dest="subject",
-                    help="The subject line of the email", metavar="PASS")
+                    help="The subject line of the email", metavar="SUBJECT")
     
     (options, attachments) = parser.parse_args()
     
@@ -142,10 +142,12 @@ def main():
         options.passwd=getpass.getpass("Please enter your password:")
     
     mail=Email()
+    if options.subject!=None:
+        Email.subject_line="[Gmailer] "+options.subject
     mail.smtp_user=options.user
     mail.smtp_pass=options.passwd
     
-    print generate_text(attachments)
+    #generate_text(attachments)
     
     #mail.body=
     mail.attachments.append(filename)

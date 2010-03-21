@@ -7,3 +7,11 @@ color=
 [alias]
 findrenames=addremove -s 100
 latest = log --limit 5
+
+[extdiff]
+cmd.interdiff = hg-interdiff
+cmd.opendiff = opendiff-w
+
+[merge-tools]
+filemerge.executable = opendiff-w
+filemerge.args = $local $other -ancestor $base -merge $output

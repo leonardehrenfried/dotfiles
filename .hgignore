@@ -12,6 +12,10 @@ Desktop/*
 Public/*
 Sites/*
 .Trash/*
+.inkscape*/*
+.android/*
+.fontconfig/*
 *.pyc
 bin/android-sdk/*
 .m2/**.*
+.DS_Store
