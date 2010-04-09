@@ -14,4 +14,6 @@ ORANGE=$'\e[33;40m'
 export PS1='\n\t ${PINK}\u ${D}at ${ORANGE}\h ${D}in ${GREEN}\w\
 ${D}\n$ '
 
-export CLICOLOR=1
+export LS_OPTIONS='--color=auto'
+export CLICOLOR='Yes'
+export LSCOLORS='Bxgxfxfxcxdxdxhbadbxbx'

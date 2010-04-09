@@ -5,7 +5,7 @@ username = Lenni <leonard.ehrenfried@web.de>
 color=
 
 [alias]
-findrenames=addremove -s 100
+findrenames=addremove -s 75 
 latest = log --limit 5
 
 [extdiff]
