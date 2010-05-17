@@ -3,7 +3,7 @@
 export PATH=/opt/local/bin:/opt/local/sbin:/Users/lenni/bin:$PATH
 export PYTHONPATH=/Users/lenni/dev/python-lib:/Users/lenni/dev/edd/:$PYTHONPATH
 export DJANGO_SETTINGS_MODULE=edd.settings
-export EDITOR=nano
+export EDITOR=vi
 
 
 D=$'\e[37;40m'
