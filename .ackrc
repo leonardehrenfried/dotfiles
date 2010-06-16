@@ -1,2 +1,3 @@
 --ignore-dir=target
 --ignore-dir=.metadata
+--type-add=java=.drl
