@@ -21,3 +21,5 @@ bin/android-sdk/*
 .m2/**.*
 .DS_Store
 Applications/*
+.hgexternalcache/*
+.gem/*
