@@ -124,5 +124,6 @@ set expandtab
 set smartindent
 " Indentation settings for using hard tabs for indent. Display tabs as
 " two characters wide.
-"set shiftwidth=2
-"set tabstop=2
+"
+: colorscheme blue
+: colorscheme macvim
