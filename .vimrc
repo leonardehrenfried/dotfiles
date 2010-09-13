@@ -127,3 +127,10 @@ set smartindent
 "
 : colorscheme blue
 : colorscheme macvim
+
+" Remove menu bar
+set guioptions-=m
+
+" Remove toolbar
+set guioptions-=T
+
