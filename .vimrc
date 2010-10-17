@@ -86,9 +86,6 @@ set laststatus=2
 " dialogue asking if you wish to save changed files.
 set confirm
 
-" Use visual bell instead of beeping when doing something wrong
-set visualbell
-
 " And reset the terminal code for the visual bell.  If visualbell is set, and
 " this line is also included, vim will neither flash nor beep.  If visualbell
 " is unset, this does nothing.
@@ -124,11 +121,12 @@ set expandtab
 set smartindent
 
 : colorscheme blue
-: colorscheme macvim
+: colorscheme ir_black
 
 " Remove menu bar
 set guioptions-=m
 " Remove toolbar
 set guioptions-=T
+set guifont=Monaco
 
 set fileencodings=utf-8
