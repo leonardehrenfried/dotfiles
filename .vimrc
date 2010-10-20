@@ -42,8 +42,10 @@ set softtabstop=2
 set expandtab
 set smartindent
 
-: colorscheme blue
-: colorscheme ir_black
+if has("gui_running")
+  colorscheme ir_black
+endif
+
 
 " Remove menu bar
 set guioptions-=m
