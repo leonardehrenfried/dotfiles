@@ -53,7 +53,16 @@ set guioptions-=m
 set guioptions-=T
 set guifont=Monaco
 
-set fileencodings=utf-8
 
+set fileencodings=utf-8
 " == Key Mappings ==
-: map <C-D> "_dd
+nmap <C-D> "_dd
+imap <C-D> <Esc>"_dd
+
+"moving lines up 
+nmap <A-S-Down> mz:m+<cr>`z
+nmap <A-S-Up> mz:m-2<cr>`z
+imap <S-Down> <C-o>mz<C-o>:m+<cr><C-o>`z
+imap <S-Up> <C-o>mz<C-o>:m-2<cr><C-o>`z
+vmap <S-Down> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <S-Up> :m'<-2<cr>`>my`<mzgv`yo`z
