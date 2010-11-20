@@ -28,7 +28,7 @@ set ruler
 set laststatus=2
 
 set confirm
-set t_vb=
+set vb t_vb=""
 set mouse=a
 set cmdheight=2
 set number        "line numbers
@@ -42,10 +42,11 @@ set softtabstop=2
 set expandtab
 set smartindent
 
-if has("gui_running")
-  colorscheme ir_black
-endif
+set fileencodings=utf-8
 
+if has("gui_running")
+  colorscheme wombat
+endif
 
 " Remove menu bar
 set guioptions-=m
@@ -53,8 +54,6 @@ set guioptions-=m
 set guioptions-=T
 set guifont=Monaco
 
-
-set fileencodings=utf-8
 " == Key Mappings ==
 nmap <C-D> "_dd
 imap <C-D> <Esc>"_dd
@@ -66,3 +65,6 @@ imap <S-Down> <C-o>mz<C-o>:m+<cr><C-o>`z
 imap <S-Up> <C-o>mz<C-o>:m-2<cr><C-o>`z
 vmap <S-Down> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <S-Up> :m'<-2<cr>`>my`<mzgv`yo`z
+
+"tab through windows
+nmap <C-Tab> <C-W>W 
