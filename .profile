@@ -1,6 +1,7 @@
 
 # MacPorts Installer addition on 2009-07-01_at_19:30:18: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:/Users/lenni/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/Users/lenni/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+
 export PYTHONPATH=/Users/lenni/dev/python-lib:/Users/lenni/dev/edd/:$PYTHONPATH
 export DJANGO_SETTINGS_MODULE=edd.settings
 export EDITOR=vi

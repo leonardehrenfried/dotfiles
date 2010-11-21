@@ -25,3 +25,4 @@ Applications/*
 .hgexternalcache/*
 .gem/*
 .vim/.netrwhist
+.tarantella
