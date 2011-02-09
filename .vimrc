@@ -5,6 +5,7 @@
 "              If you're a more advanced user, building your own .vimrc based
 "              on this file is still a good idea.
 
+set rtp+="C:\Dokumente und Einstellungen\lehrenfried.MYNET\dev\home-backup\.vim"
 set nocompatible
 filetype indent plugin on
 syntax on
