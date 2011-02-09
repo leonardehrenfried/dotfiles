@@ -29,7 +29,7 @@ set ruler
 set laststatus=2
 
 set confirm
-set vb t_vb=""
+set visualbell t_vb=
 set mouse=a
 set cmdheight=2
 set number        "line numbers
@@ -45,15 +45,25 @@ set smartindent
 
 set fileencodings=utf-8
 
-if has("gui_running")
-  colorscheme wombat
+" CONDITIONALS
+
+"Windows specific
+if has('win32') 
+ set guifont=Consolas
+ set lines=999 columns=999
 endif
 
-" Remove menu bar
-set guioptions-=m
-" Remove toolbar
-set guioptions-=T
-set guifont=Monaco
+"OS X specific
+if has('osx') 
+ set guifont=Monaco
+endif
+
+"GUI specific
+if has("gui_running")
+  colorscheme macvim
+  set guioptions-=m
+  set guioptions-=T
+endif
 
 " == Key Mappings ==
 nmap <C-D> "_dd
