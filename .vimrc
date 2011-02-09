@@ -50,17 +50,18 @@ set fileencodings=utf-8
 "Windows specific
 if has('win32') 
  set guifont=Consolas
+ colorscheme wombat
  set lines=999 columns=999
 endif
 
 "OS X specific
 if has('osx') 
  set guifont=Monaco
+ colorscheme macvim
 endif
 
 "GUI specific
 if has("gui_running")
-  colorscheme macvim
   set guioptions-=m
   set guioptions-=T
 endif
