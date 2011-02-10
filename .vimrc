@@ -5,6 +5,7 @@
 "              If you're a more advanced user, building your own .vimrc based
 "              on this file is still a good idea.
 
+set rtp+="C:\Dokumente und Einstellungen\lehrenfried.MYNET\dev\home-backup\.vim"
 set nocompatible
 filetype indent plugin on
 syntax on
@@ -28,7 +29,7 @@ set ruler
 set laststatus=2
 
 set confirm
-set vb t_vb=""
+set visualbell t_vb=
 set mouse=a
 set cmdheight=2
 set number        "line numbers
@@ -41,18 +42,30 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set smartindent
+set tabstop=2
 
 set fileencodings=utf-8
 
-if has("gui_running")
-  colorscheme wombat
+" CONDITIONALS
+
+"Windows specific
+if has('win32') 
+ set guifont=Consolas
+ colorscheme wombat
+ set lines=999 columns=999
 endif
 
-" Remove menu bar
-set guioptions-=m
-" Remove toolbar
-set guioptions-=T
-set guifont=Monaco
+"OS X specific
+if has('osx') 
+ set guifont=Monaco
+ colorscheme macvim
+endif
+
+"GUI specific
+if has("gui_running")
+  set guioptions-=m
+  set guioptions-=T
+endif
 
 " == Key Mappings ==
 nmap <C-D> "_dd

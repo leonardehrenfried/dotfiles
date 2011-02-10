@@ -4,6 +4,8 @@ username = Leonard Ehrenfried <leonard.ehrenfried@web.de>
 [extensions]
 color=
 progress=
+fetch=
+graphlog=
 
 [alias]
 findrenames=addremove -s 75 
