@@ -39,14 +39,19 @@ set pastetoggle=<F11>
 
 " == Indentation ==
 set shiftwidth=2
+set tabstop=2
 set softtabstop=2
 set expandtab
 set smartindent
-set tabstop=2
 
 set fileencodings=utf-8
 
-" CONDITIONALS
+" Excludes
+:set wildignore+=*.o,*.obj,.git,.hg,CVS,target
+
+""""""""""""""""
+" CONDITIONALS "
+""""""""""""""""
 
 "Windows specific
 if has('win32') 
