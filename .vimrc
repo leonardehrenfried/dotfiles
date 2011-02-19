@@ -61,9 +61,9 @@ if has('win32')
 endif
 
 "OS X specific
-if has('osx') 
+if has("gui_macvim") 
  set guifont=Monaco
- colorscheme macvim
+ colorscheme wombat 
 endif
 
 "GUI specific
