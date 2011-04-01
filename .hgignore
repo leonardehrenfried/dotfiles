@@ -28,3 +28,4 @@ Applications/*
 .tarantella
 .bundler
 .vim/ruby/command-t/
+subversion/**.*

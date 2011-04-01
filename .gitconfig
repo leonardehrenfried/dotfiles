@@ -1,6 +1,9 @@
 [user]
   name = Leonard Ehrenfried 
 
+[diff]
+  renames=true
+
 [color]
   ui = auto
 
