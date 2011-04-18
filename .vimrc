@@ -57,7 +57,7 @@ set fileencodings=utf-8
 if has('win32') 
  set guifont=Consolas
  colorscheme wombat
- set lines=999 columns=999
+ set lines=999 columns=120
 endif
 
 "OS X specific
