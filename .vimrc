@@ -45,6 +45,7 @@ set expandtab
 set smartindent
 
 set fileencodings=utf-8
+set encoding=utf-8
 
 " Excludes
 :set wildignore+=*.o,*.obj,.git,.hg,CVS,target
