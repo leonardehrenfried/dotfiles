@@ -31,7 +31,7 @@ set laststatus=2
 set confirm
 set visualbell t_vb=
 set mouse=a
-set cmdheight=2
+set cmdheight=1
 set number        "line numbers
 
 set notimeout ttimeout ttimeoutlen=200

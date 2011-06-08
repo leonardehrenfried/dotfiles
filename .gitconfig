@@ -1,5 +1,6 @@
 [user]
-  name = Leonard Ehrenfried 
+	name = Leonard Ehrenfried
+	email = leonard.ehrenfried@web.de
 
 [diff]
   renames=true
