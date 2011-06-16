@@ -1,4 +1,4 @@
 --ignore-dir=target
 --ignore-dir=.metadata
 --type-add=java=.drl
---type-add=n4=.n4ml,.pmi
+--type-set=n4=.n4ml,.pmi
