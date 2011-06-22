@@ -1,35 +1,34 @@
 [user]
 	name = Leonard Ehrenfried
-	email = leonard.ehrenfried@numberfour.eu 
 
 [diff]
-  renames=true
+    renames=true
 
 [color]
-  ui = auto
+    ui = auto
 
 [color "branch"]
- current = yellow reverse
- local = yellow
- remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [core]
-  pager = cat 
-  filemode = false
+    pager = cat 
+    filemode = false
 
 [alias]
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
 
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
