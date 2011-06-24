@@ -1,0 +1,5 @@
+#!/bin/bash -e
+while [ ! -f pom.xml ]
+do
+    cd ..
+done
