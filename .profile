@@ -18,3 +18,9 @@ ${D}\n$ '
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
+
+
+if [ -f .host-specific.sh ] 
+then 
+    source .host-specific.sh
+fi
