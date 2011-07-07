@@ -11,8 +11,17 @@ D=$'\e[37;40m'
 PINK=$'\e[35;40m'
 GREEN=$'\e[32;40m'
 ORANGE=$'\e[33;40m'
+RED=$'\e[0;31m'
 
-export PS1='\n\t ${PINK}\u ${D}at ${ORANGE}\h ${D}in ${GREEN}\w\
+###############
+#    prompt   #
+###############
+
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PS1='\n\t ${PINK}\u ${D}at ${ORANGE}\h ${D}in ${GREEN}\w $RED$(parse_git_branch)\
 ${D}\n$ '
 
 export LS_OPTIONS='--color=auto'
