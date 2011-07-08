@@ -28,8 +28,16 @@ export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
 
+#
+#   external
+#
 
 if [ -f .host-specific.sh ] 
 then 
     source .host-specific.sh
+fi
+
+if [ -f git-completion.bash ] 
+then 
+    source git-completion.bash
 fi
