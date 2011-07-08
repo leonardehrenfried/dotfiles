@@ -37,7 +37,9 @@ then
     source .host-specific.sh
 fi
 
-if [ -f git-completion.bash ] 
+COMPLETION=/opt/local/share/doc/git-core/contrib/completion/git-completion.bash
+
+if [ -f $COMPLETION ] 
 then 
-    source git-completion.bash
+    source $COMPLETION
 fi
