@@ -43,8 +43,5 @@
     trustExitCode = false
     keepBackup = false
 
-[diff]
-    external = p4diff
-
 [difftool "Kaleidoscope"]
     cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
