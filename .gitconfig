@@ -32,5 +32,19 @@
 
 [branch]
     autosetuprebase = always
+
+[merge]
+    keepBackup = false;
+    tool = p4merge
+
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+
+[diff]
+    external = p4diff
+
 [difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
