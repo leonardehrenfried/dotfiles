@@ -15,13 +15,17 @@ PINK=$'\e[35;40m'
 GREEN=$'\e[32;40m'
 ORANGE=$'\e[33;40m'
 RED=$'\e[0;31m'
+CYAN=$'\e[0;36m'
 
 # prompt
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1='\n\t ${PINK}\u ${D}at ${ORANGE}\h ${D}in ${GREEN}\w $RED$(parse_git_branch)\
+export PS1='\n\t ${PINK}\u ${D}at ${ORANGE}\h ${D}in ${GREEN}\w ${CYAN}$(parse_git_branch)\
 ${D}\n$ '
+
+# setting the current dir as the window title
+PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 # git autocomplete
 COMPLETION=/opt/local/share/doc/git-core/contrib/completion/git-completion.bash
