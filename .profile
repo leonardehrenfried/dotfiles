@@ -31,6 +31,7 @@ then
 fi
 
 # host specific email address for git
+# see http://lenni.info/blog/?p=510
 if [ -f .host-specific.sh ] 
 then 
     source .host-specific.sh
