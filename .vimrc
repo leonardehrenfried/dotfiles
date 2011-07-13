@@ -47,6 +47,9 @@ set smartindent
 set fileencodings=utf-8
 set encoding=utf-8
 
+" file types
+au BufNewFile,BufRead *.less set filetype=less
+
 " Excludes
 :set wildignore+=*.o,*.obj,.git,.hg,CVS,target
 
