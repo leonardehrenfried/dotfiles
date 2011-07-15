@@ -67,7 +67,7 @@ endif
 "OS X specific
 if has("gui_macvim") 
  set guifont=Monaco
- colorscheme wombat 
+ colorscheme solarized
 endif
 
 "GUI specific
@@ -89,4 +89,7 @@ vmap <S-Down> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <S-Up> :m'<-2<cr>`>my`<mzgv`yo`z
 
 "tab through windows
-nmap <C-Tab> <C-W>W 
+nmap <C-Tab> <C-W>W
+
+"replace word selected in visual mode
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>"
