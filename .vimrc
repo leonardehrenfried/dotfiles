@@ -67,6 +67,7 @@ endif
 "OS X specific
 if has("gui_macvim") 
  set guifont=Monaco
+ set background=dark
  colorscheme solarized
 endif
 
