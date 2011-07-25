@@ -1,4 +1,4 @@
-export PATH=/opt/local/bin:/opt/local/sbin:/Users/lenni/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+export PATH=/usr/local/bin:/Users/lenni/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
 
 export PYTHONPATH=/Users/lenni/dev/python-lib:/Users/lenni/dev/edd/:$PYTHONPATH
 export DJANGO_SETTINGS_MODULE=edd.settings
@@ -28,7 +28,7 @@ ${D}\n$ '
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 # git autocomplete
-COMPLETION=/opt/local/share/doc/git-core/contrib/completion/git-completion.bash
+COMPLETION=/usr/local/etc/bash_completion.d
 if [ -f $COMPLETION ] 
 then 
     source $COMPLETION
