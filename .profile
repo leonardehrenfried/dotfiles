@@ -28,7 +28,7 @@ ${D}\n$ '
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 # git autocomplete
-COMPLETION=/usr/local/etc/bash_completion.d/bash-completion.bash
+COMPLETION=/usr/local/etc/bash_completion.d/git-completion.bash
 if [ -f $COMPLETION ] 
 then 
     source $COMPLETION
