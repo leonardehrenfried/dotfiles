@@ -29,13 +29,14 @@
 
 [alias]
     lg = log --graph --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
+    preview = commit --dry-run -a
 
 [branch]
     autosetuprebase = always
 
 [merge]
     keepBackup = false;
-    tool = p4merge
+    tool = araxis 
 
 [mergetool "p4merge"]
     cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
