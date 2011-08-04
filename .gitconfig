@@ -29,7 +29,7 @@
 
 [alias]
     lg = log --graph --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
-    preview = commit --dry-run -a
+    preview = commit --dry-run -a -short
 
 [branch]
     autosetuprebase = always
