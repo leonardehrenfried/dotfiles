@@ -47,6 +47,8 @@ set smartindent
 set fileencodings=utf-8
 set encoding=utf-8
 
+let $JS_CMD='node'
+
 " file types
 au BufNewFile,BufRead *.less set filetype=less
 
