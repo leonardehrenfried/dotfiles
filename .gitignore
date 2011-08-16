@@ -1,4 +1,4 @@
-syntax:glob
+*.swp
 
 .macports/*
 Music/*
