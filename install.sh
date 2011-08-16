@@ -1,6 +1,9 @@
 #! /bin/bash -e
 
 # set up the symlinks for all dotfiles
-ln -s ~/.vimrc          ./.vimrc
-ln -s ~/.vim            ./.vim
-ln -s ~/.gitconfig      ./.gitconfig
+ln -s `pwd`/.vimrc          ~/.vimrc
+ln -s `pwd`/.vim            ~/.vim
+ln -s `pwd`/.gitconfig      ~/.gitconfig
+ln -s `pwd`/.inputrc        ~/.inputrc
+ln -s `pwd`/.profile        ~/.profile
+ln -s `pwd`/.ackrc          ~/.ackrc
