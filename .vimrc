@@ -1,6 +1,5 @@
 " Author: Leonard Ehrenfried <http://lenni.info>
 
-set rtp+="C:\Dokumente und Einstellungen\lehrenfried.MYNET\dev\home-backup\.vim"
 set nocompatible
 filetype indent plugin on
 syntax on
