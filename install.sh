@@ -7,3 +7,4 @@ ln -s `pwd`/.gitconfig      ~/.gitconfig
 ln -s `pwd`/.inputrc        ~/.inputrc
 ln -s `pwd`/.profile        ~/.profile
 ln -s `pwd`/.ackrc          ~/.ackrc
+ln -s `pwd`/.gemrc          ~/.gemrc
