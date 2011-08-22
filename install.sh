@@ -8,3 +8,7 @@ ln -s `pwd`/.inputrc        ~/.inputrc
 ln -s `pwd`/.profile        ~/.profile
 ln -s `pwd`/.ackrc          ~/.ackrc
 ln -s `pwd`/.gemrc          ~/.gemrc
+
+cd .vim/bundle/command-t/ruby/command-t
+ruby extconf.rb
+make
