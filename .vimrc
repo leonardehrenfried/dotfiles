@@ -52,11 +52,6 @@ au BufNewFile,BufRead *.less set filetype=less
 """"""""""""""""
 " CONDITIONALS "
 """"""""""""""""
-let $JS_CMD='node'
-
-""""""""""""""""
-" CONDITIONALS "
-""""""""""""""""
 
 "Windows specific
 if has('win32') 
@@ -90,8 +85,17 @@ imap <S-Up> <C-o>mz<C-o>:m-2<cr><C-o>`z
 vmap <S-Down> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <S-Up> :m'<-2<cr>`>my`<mzgv`yo`z
 
+"Search mappings: These will make it so that going to the next one in a
+"search will center on the line it's found in.
+map N Nzz
+map n nzz
+
 "tab through windows
 nmap <C-Tab> <C-W>W
+"next Tab
+nnoremap <silent> <C-Right> :tabnext<CR>
+"previous Tab
+nnoremap <silent> <C-Left> :tabprevious<CR>
 
 "replace word selected in visual mode
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>"
