@@ -1,5 +1,8 @@
 " Author: Leonard Ehrenfried <http://lenni.info>
 
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 set nocompatible
 filetype indent plugin on
 syntax on
