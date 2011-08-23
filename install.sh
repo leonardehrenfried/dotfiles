@@ -11,8 +11,9 @@ ln -sf `pwd`/.gemrc          ~/.gemrc
 
 git submodule init 
 git submodule update
+git submodule foreach 'git checkout master && git pull'
 
-
+#compile command-t
 cd .vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
