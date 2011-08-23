@@ -7,11 +7,12 @@ for i in "${dotfiles[@]}"
 do
     :
     echo "Symlinking $i"
-    ln -sf `pwd`/.$i ~/.$i
+    ln -sf `pwd`/$i ~/$i
 done
 
 echo ""
 
+# setting up the git submodules
 git submodule init 
 git submodule update
 git submodule foreach 'git checkout master && git pull'
