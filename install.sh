@@ -1,17 +1,16 @@
 #! /bin/bash -e
 
 # set up the symlinks for all dotfiles
-ln -s `pwd`/.vimrc          ~/.vimrc
-ln -s `pwd`/.vim            ~/.vim
-ln -s `pwd`/.gitconfig      ~/.gitconfig
-ln -s `pwd`/.inputrc        ~/.inputrc
-ln -s `pwd`/.profile        ~/.profile
-ln -s `pwd`/.ackrc          ~/.ackrc
-ln -s `pwd`/.gemrc          ~/.gemrc
+ln -sf `pwd`/.vimrc          ~/.vimrc
+ln -sf `pwd`/.vim            ~/.vim
+ln -sf `pwd`/.gitconfig      ~/.gitconfig
+ln -sf `pwd`/.inputrc        ~/.inputrc
+ln -sf `pwd`/.profile        ~/.profile
+ln -sf `pwd`/.ackrc          ~/.ackrc
+ln -sf `pwd`/.gemrc          ~/.gemrc
 
 git submodule init 
 git submodule update
-git submodule foreach git pull
 
 
 cd .vim/bundle/command-t/ruby/command-t
