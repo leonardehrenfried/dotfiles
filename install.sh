@@ -9,11 +9,12 @@ ln -sf `pwd`/.profile        ~/.profile
 ln -sf `pwd`/.ackrc          ~/.ackrc
 ln -sf `pwd`/.gemrc          ~/.gemrc
 
+# setting up the git submodules
 git submodule init 
 git submodule update
 git submodule foreach 'git checkout master && git pull'
 
-#compile command-t
+# compile command-t
 cd .vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
