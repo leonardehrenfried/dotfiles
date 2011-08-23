@@ -1,19 +1,23 @@
 #! /bin/bash -e
 
-# set up the symlinks for all dotfiles
-ln -sf `pwd`/.vimrc          ~/.vimrc
-ln -sf `pwd`/.vim            ~/.vim
-ln -sf `pwd`/.gitconfig      ~/.gitconfig
-ln -sf `pwd`/.inputrc        ~/.inputrc
-ln -sf `pwd`/.profile        ~/.profile
-ln -sf `pwd`/.ackrc          ~/.ackrc
-ln -sf `pwd`/.gemrc          ~/.gemrc
+#create the symlinks for all dotfiles
+declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc)
+
+for i in "${dotfiles[@]}"
+do
+    :
+    echo "Symlinking $i"
+    ln -sf `pwd`/.$i ~/.$i
+done
+
+echo ""
 
 git submodule init 
 git submodule update
 git submodule foreach 'git checkout master && git pull'
 
-#compile command-t
+echo ""
+echo "compiling command-t"
 cd .vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
