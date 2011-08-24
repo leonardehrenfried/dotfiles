@@ -11,14 +11,14 @@ do
 done
 
 echo ""
-
+echo "*** Checking out git submodules ***"
 # setting up the git submodules
 git submodule init 
 git submodule update
 git submodule foreach 'git checkout master && git pull'
 
 echo ""
-echo "compiling command-t"
+echo "*** Compiling command-t ***"
 cd .vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
