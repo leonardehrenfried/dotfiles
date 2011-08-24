@@ -1,7 +1,7 @@
 #! /bin/bash -e
 
 #create the symlinks for all dotfiles
-declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc)
+declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc)
 
 for i in "${dotfiles[@]}"
 do
