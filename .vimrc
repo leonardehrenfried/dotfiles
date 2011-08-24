@@ -9,6 +9,8 @@ syntax on
 
 set hidden
 set wildmenu "cli autocomplete
+" Excludes
+:set wildignore+=*.o,*.obj,.git,.hg,CVS,target
 set showcmd
 
 set hlsearch
@@ -46,11 +48,38 @@ set encoding=utf-8
 
 let $JS_CMD='node'
 
-" file types
+"""""""""""""""""
+" FILE SPECIFIC "
+"""""""""""""""""
+
+" less
 au BufNewFile,BufRead *.less set filetype=less
 
-" Excludes
-:set wildignore+=*.o,*.obj,.git,.hg,CVS,target
+" python
+autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+\ formatoptions+=croq softtabstop=4 smartindent
+\ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+let python_highlight_all=1
+let python_highlight_exceptions=0
+let python_highlight_builtins=0
+
+" ruby 
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
+
+" xml/html
+autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+
+" CSS
+autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" markdown
+autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolumn=79
+autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=79
+
+" javascript
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
+let javascript_enable_domhtmlcss=1
 
 """"""""""""""""
 " CONDITIONALS "
@@ -80,7 +109,10 @@ if has("gui_running")
   set guioptions-=T
 endif
 
-" == Key Mappings ==
+""""""""""""""""
+" KEY MAPPINGS "
+""""""""""""""""
+
 nmap <C-D> "_dd
 imap <C-D> <Esc>"_dd
 
