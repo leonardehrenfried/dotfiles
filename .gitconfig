@@ -37,14 +37,8 @@
     autosetuprebase = always
 
 [merge]
-    keepBackup = false;
-    tool = araxis 
+    tool = mvim
 
-[mergetool "p4merge"]
-    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-    keepTemporaries = false
-    trustExitCode = false
-    keepBackup = false
-
-[difftool "Kaleidoscope"]
-    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[mergetool "mvim"]
+	cmd = mvim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    keepbackup = false
