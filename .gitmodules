@@ -17,3 +17,6 @@
 [submodule ".vim/bundle/less"]
 	path = .vim/bundle/less
 	url = git://gist.github.com/369178.git
+[submodule ".vim/bundle/jslint.vim"]
+	path = .vim/bundle/jslint.vim
+	url = https://github.com/hallettj/jslint.vim.git
