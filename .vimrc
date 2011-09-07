@@ -1,5 +1,7 @@
 " Author: Leonard Ehrenfried <http://lenni.info>
 
+filetype off 
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 

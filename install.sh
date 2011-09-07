@@ -1,7 +1,14 @@
 #! /bin/bash -e
 
+#create ssh dir if it doesn't exist
+if [ -f '~/.ssh/' ];
+then
+    mkdir '~/.ssh/'
+    echo "Creating dir ~/.ssh"
+fi
+
 #create the symlinks for all dotfiles
-declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc bin)
+declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc bin .ssh/config)
 
 for i in "${dotfiles[@]}"
 do

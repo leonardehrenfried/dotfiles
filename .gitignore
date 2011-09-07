@@ -1,3 +1,4 @@
 *.swp
 .vim/.vim
 .vim/.netrwhist
+bin/bin
