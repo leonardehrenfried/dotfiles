@@ -1,6 +1,9 @@
 " Author: Leonard Ehrenfried <http://lenni.info>
 
-filetype off 
+" needs to be there so vim has a 0 exit code when using pathogen
+" http://andrewho.co.uk/weblog/vim-pathogen-with-mutt-and-git
+filetype on
+filetype off
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
