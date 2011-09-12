@@ -134,6 +134,14 @@ map n nzz
 
 "tab through windows
 nmap <C-Tab> <C-W>W
+
+"close buffer
+nnoremap <C-C> :bd<CR>
+
+" cycle through buffers
+nnoremap <A-D-Left> :bnext<CR>
+nnoremap <A-D-Right> :bprevious<CR>
+
 "next Tab
 nnoremap <silent> <C-Right> :tabnext<CR>
 "previous Tab
