@@ -1,1 +1,3 @@
+set editing-mode vi
+set expand-tilde Off
 set bell-style none

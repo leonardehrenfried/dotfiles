@@ -29,10 +29,12 @@
 	ignorecase = false
 
 [alias]
-    lg = log --graph --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
+    stat = status -sb
+    wdiff = diff --word-diff
     preview = commit --dry-run -a --short
     dstat   = diff --stat
     cdiff   = diff --cached
+    lg = log --graph --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
 
 [branch]
     autosetuprebase = always
