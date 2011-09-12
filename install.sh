@@ -1,5 +1,14 @@
 #! /bin/bash -e
 
+# OS specific stuff
+OS=`uname`
+
+if [ "$OS" == "Darwin" ]
+then
+    echo "*** You are on OS X. Setting defaults. ***"
+    sh ./osx-defaults.sh
+fi
+
 #create ssh dir if it doesn't exist
 if [ -f '~/.ssh/' ];
 then
@@ -29,3 +38,4 @@ echo "*** Compiling command-t ***"
 cd .vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
+
