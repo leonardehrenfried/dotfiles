@@ -42,9 +42,12 @@
 [merge]
     tool = mvim
 
+[mergetool]
+    keepBackup = false
+
 [mergetool "mvim"]
     # -f = forground/no fork
     # -d = diff mode
     # -c = command
     cmd = mvim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$REMOTE\"
-    keepbackup = false
+
