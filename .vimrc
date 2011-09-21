@@ -19,7 +19,7 @@ set wildmenu "cli autocomplete
 set showcmd
 
 set hlsearch
-
+set incsearch
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
