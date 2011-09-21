@@ -24,7 +24,8 @@
     untracked = cyan
 
 [core]
-    pager = cat 
+    pager = cat
+    editor = /usr/bin/vim
     filemode = false
 	ignorecase = false
 
