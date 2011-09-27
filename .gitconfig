@@ -28,6 +28,7 @@
     editor = /usr/bin/vim
     filemode = false
 	ignorecase = false
+	excludesfile = ~/.cvsignore
 
 [alias]
     stat = status -sb
