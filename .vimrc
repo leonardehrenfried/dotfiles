@@ -53,6 +53,11 @@ set encoding=utf-8
 
 let $JS_CMD='node'
 
+" disable swap files
+set nobackup
+set nowritebackup
+set noswapfile
+
 """""""""""""""""
 " FILE SPECIFIC "
 """""""""""""""""
