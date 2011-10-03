@@ -16,9 +16,6 @@
 [submodule ".vim/bundle/vim-indent-guides"]
 	path = .vim/bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule ".vim/bundle/vim-less"]
-	path = .vim/bundle/vim-less
-	url = git://github.com/lenniboy/vim-less.git 
 [submodule ".vim/bundle/vim-css-color"]
 	path = .vim/bundle/vim-css-color
 	url = https://github.com/skammer/vim-css-color.git
