@@ -28,6 +28,7 @@ set smartcase
 set backspace=indent,eol,start
 set autoindent
 
+set display=lastline
 set nostartofline
 set ruler
 set laststatus=2
