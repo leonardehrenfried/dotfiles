@@ -2,11 +2,10 @@
 
 " needs to be there so vim has a 0 exit code when using pathogen
 " http://andrewho.co.uk/weblog/vim-pathogen-with-mutt-and-git
-filetype on
-filetype off
+"filetype on
+"filetype off
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
 
 set nocompatible
 filetype indent plugin on
@@ -157,3 +156,5 @@ nnoremap <silent> <C-Left> :tabprevious<CR>
 
 "replace word selected in visual mode
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>"
+
+inoremap <C-space> <C-x><C-o> 
