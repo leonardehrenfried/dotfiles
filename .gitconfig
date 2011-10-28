@@ -53,3 +53,5 @@
     # -c = command
     cmd = mvim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$REMOTE\"
 
+[push]
+	default = current
