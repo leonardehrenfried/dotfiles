@@ -64,9 +64,6 @@ set noswapfile
 " FILE SPECIFIC "
 """""""""""""""""
 
-" less
-au BufNewFile,BufRead *.less set filetype=less
-
 " python
 autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
 \ formatoptions+=croq softtabstop=4 smartindent
@@ -82,6 +79,7 @@ autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandt
 
 " CSS
 autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+au BufNewFile,BufRead *.less,*.css nnoremap <buffer> <localleader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>
 
 " markdown
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolumn=79
