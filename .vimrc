@@ -153,6 +153,6 @@ nnoremap <silent> <C-Right> :tabnext<CR>
 nnoremap <silent> <C-Left> :tabprevious<CR>
 
 "replace word selected in visual mode
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>"
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 inoremap <C-space> <C-x><C-o> 
