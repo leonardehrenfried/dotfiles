@@ -1,5 +1,5 @@
 [user]
-	name = Leonard Ehrenfried
+    name = Leonard Ehrenfried
 
 [diff]
     renames=true
@@ -27,8 +27,8 @@
     pager = cat
     editor = /usr/bin/vim
     filemode = false
-	ignorecase = false
-	excludesfile = ~/.cvsignore
+    ignorecase = false
+    excludesfile = ~/.cvsignore
 
 [alias]
     stat = status -sb
@@ -54,7 +54,7 @@
     cmd = mvim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$REMOTE\"
 
 [push]
-	default = current
+    default = current
 
 [advice]
     pushNonFastForward = false
