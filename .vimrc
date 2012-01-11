@@ -124,13 +124,13 @@ endif
 nmap <C-D> "_dd
 imap <C-D> <Esc>"_dd
 
-"moving lines up 
-nmap <A-S-Down> mz:m+<cr>`z
-nmap <A-S-Up> mz:m-2<cr>`z
-imap <S-Down> <C-o>mz<C-o>:m+<cr><C-o>`z
-imap <S-Up> <C-o>mz<C-o>:m-2<cr><C-o>`z
-vmap <S-Down> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <S-Up> :m'<-2<cr>`>my`<mzgv`yo`z
+"moving lines up and down
+nnoremap <C-j> mz:m+<cr>`z
+nnoremap <C-k> mz:m-2<cr>`z
+inoremap <C-j> <C-o>mz<C-o>:m+<cr><C-o>`z
+inoremap <C-k> <C-o>mz<C-o>:m-2<cr><C-o>`z
+vnoremap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 "Search mappings: These will make it so that going to the next one in a
 "search will center on the line it's found in.
