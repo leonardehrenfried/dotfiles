@@ -138,7 +138,8 @@ map N Nzz
 map n nzz
 
 "tab through windows
-nmap <C-Tab> <C-W>W
+nnoremap <C-Tab> <C-W>W
+
 
 "close buffer
 nnoremap <C-C> :bd<CR>
