@@ -75,7 +75,7 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 co
 
 " xml/html
 autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-"autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+"autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bundle/HTML-AutoCloseTag/ftplugin/html_autoclosetag.vim
 
 " CSS
 autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
@@ -142,7 +142,7 @@ nnoremap <C-Tab> <C-W>W
 
 
 "close buffer
-nnoremap <C-C> :bd<CR>
+nnoremap <C-C> :Bclose<CR>
 
 " cycle through buffers
 nnoremap <A-D-Left> :bnext<CR>
