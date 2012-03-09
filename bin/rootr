@@ -1,5 +1,5 @@
 #!/bin/bash -e
-while [ ! -f pom.xml ]
+while [ ! -d .git ]
 do
     cd ..
 done
