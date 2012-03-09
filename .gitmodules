@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/Rename"]
 	path = .vim/bundle/Rename
 	url = https://github.com/vim-scripts/Rename.git
+[submodule ".vim/bundle/vim-scala"]
+	path = .vim/bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
