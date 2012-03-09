@@ -1,5 +1,10 @@
 export PATH=/usr/local/bin:/Users/lenni/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
 
+if [ -d /usr/local/Cellar/ruby/1.9.3-p125/bin ]
+then
+    export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p125/bin"
+fi
+
 export PYTHONPATH=/Users/lenni/dev/python-lib:/Users/lenni/dev/edd/:$PYTHONPATH
 export DJANGO_SETTINGS_MODULE=edd.settings
 export EDITOR=vi
