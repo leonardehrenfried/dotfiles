@@ -75,7 +75,7 @@ autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 co
 
 " xml/html
 autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-"autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako source ~/.vim/bundle/HTML-AutoCloseTag/ftplugin/html_autoclosetag.vim
+autocmd FileType xml,html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 " CSS
 autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
