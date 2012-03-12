@@ -1,8 +1,13 @@
-export PATH=/usr/local/bin:/Users/lenni/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+export PATH=/usr/local/bin:/Users/lenni/bin:$PATH
 
 if [ -d /usr/local/Cellar/ruby/1.9.3-p125/bin ]
 then
     export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p125/bin"
+fi
+
+if [ -d /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin ]
+then
+    export PATH="$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin"
 fi
 
 export PYTHONPATH=/Users/lenni/dev/python-lib:/Users/lenni/dev/edd/:$PYTHONPATH
