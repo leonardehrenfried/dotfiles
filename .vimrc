@@ -42,9 +42,9 @@ set notimeout ttimeout ttimeoutlen=200
 set pastetoggle=<F11>
 
 " == Indentation ==
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 set smartindent
 
@@ -78,7 +78,7 @@ autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandt
 autocmd FileType xml,html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 " CSS
-autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+"autocmd FileType css setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 au BufNewFile,BufRead *.less,*.css nnoremap <buffer> <localleader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>
 
 " markdown
@@ -86,11 +86,11 @@ autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolum
 autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=79
 
 " javascript
-autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
+"autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
 let javascript_enable_domhtmlcss=1
 
 " java 
-autocmd FileType java setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=80
+"autocmd FileType java setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=80
 
 """"""""""""""""
 " CONDITIONALS "
@@ -143,7 +143,6 @@ map n nzz
 "tab through windows
 nnoremap <C-Tab> <C-W>W
 
-
 "close buffer
 nnoremap <C-C> :Bclose<CR>
 
@@ -159,4 +158,9 @@ nnoremap <silent> <C-Left> :tabprevious<CR>
 "replace word selected in visual mode
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
+"omnicomplete
 inoremap <C-space> <C-x><C-o> 
+
+"Flush command-t buffer
+nnoremap <Leader>f :CommandTFlush<CR>
+
