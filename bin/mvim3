@@ -1,2 +1,2 @@
 #! /bin/bash
-mvim +vsplit +vsplit $@
+mvim +vsplit +vsplit -c ":set lines=999 columns=999" $@ 
