@@ -2,5 +2,58 @@ snippet @t
 	@Test
 	public void ${1:Name}() throws Exception {
 		${2}
-		assertThat("snippet").isEqualTo("snippett
+		assertThat("snippet").isEqualTo("snippett");
+	 }
+snippet @tfake
+	@Test
+	public void ${1:test}() throws Exception{
+		running(fakeApplication(inMemoryDatabase()), new Runnable() {
+		  public void run() {
+			${2}
+			assertThat(null).isNotNull();
+		}
+	  });
 	}
+
+snippet entity
+	package models;
+	
+	import java.util.*;
+	import javax.persistence.*;
+	
+	import play.db.ebean.*;
+	import play.data.format.*;
+	import play.data.validation.*;
+			
+	@Entity
+	public class ${1:Name} extends Model{
+	  
+	  @Id
+	  @Constraints.Min(10)
+	  public Long id;
+	  
+	  public static Finder<Long,$1> find = new Finder<Long,$1>(
+		  Long.class, $1.class
+	  );
+	}
+snippet test
+	package test;
+	import org.junit.*;
+
+	import models.*;
+	import play.mvc.*;
+	import play.test.*;
+	import play.libs.F.*;
+
+	import static play.test.Helpers.*;
+	import static org.fest.assertions.Assertions.*;
+
+	public class ${1:Class}Test {
+		  
+	  @Test 
+	  public void ${2:testMethod}() throws Exception{
+	    ${3}
+	    assertThat("snippet").isEqualTo("snippett");
+	  }
+	}
+
