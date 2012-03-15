@@ -14,7 +14,9 @@ syntax on
 set hidden
 set wildmenu "cli autocomplete
 " Excludes
-set wildignore+=*.o,*.obj,.git,.hg,CVS,tmp,target
+set wildignore+=*.o,*.obj,tmp,target,
+set wildignore+=.git,.hg,CVS
+set wildignore+=*.*.db "Hypersonic db files
 set showcmd
 
 set hlsearch
