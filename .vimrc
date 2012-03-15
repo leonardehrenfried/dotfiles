@@ -141,6 +141,8 @@ vnoremap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
 "search will center on the line it's found in.
 map N Nzz
 map n nzz
+"clear search highlighting
+noremap <silent><Leader>/ :nohls<CR>
 
 "tab through windows
 nnoremap <C-Tab> <C-W>W
