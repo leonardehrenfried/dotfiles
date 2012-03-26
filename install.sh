@@ -38,4 +38,5 @@ echo "*** Compiling command-t ***"
 cd .vim/bundle/command-t/ruby/command-t
 ruby extconf.rb
 make
+make clean
 
