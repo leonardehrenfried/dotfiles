@@ -94,6 +94,8 @@ let javascript_enable_domhtmlcss=1
 " java 
 "autocmd FileType java setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=80
 
+autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
+
 """"""""""""""""
 " CONDITIONALS "
 """"""""""""""""
