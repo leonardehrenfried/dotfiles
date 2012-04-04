@@ -14,7 +14,8 @@ syntax on
 set hidden
 set wildmenu "cli autocomplete
 " Excludes
-set wildignore+=*.o,*.obj,tmp,target,
+set wildignore+=*.o,*.obj
+set wildignore+=tmp,target,precompiled
 set wildignore+=.git,.hg,CVS
 set wildignore+=*.*.db "Hypersonic db files
 set showcmd
@@ -93,6 +94,8 @@ let javascript_enable_domhtmlcss=1
 
 " java 
 "autocmd FileType java setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=80
+
+autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 """"""""""""""""
 " CONDITIONALS "

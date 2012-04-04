@@ -1,0 +1,3 @@
+#! /bin/bash
+
+ps aux|grep "ssh -f"|grep -v grep

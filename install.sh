@@ -36,7 +36,7 @@ git submodule foreach 'git checkout master && git pull'
 echo ""
 echo "*** Compiling command-t ***"
 cd .vim/bundle/command-t/ruby/command-t
+make clean
 ruby extconf.rb
 make
-make clean
 
