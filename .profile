@@ -56,3 +56,5 @@ export GIT_AUTHOR_NAME="Leonard Ehrenfried"
 export GIT_COMMITTER_NAME="Leonard Ehrenfried"
 export GIT_AUTHOR_EMAIL=$EMAIL
 export GIT_COMMITTER_EMAIL=$EMAIL
+
+export MAVEN_OPTS=-Xmx512m
