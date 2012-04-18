@@ -15,7 +15,7 @@ set hidden
 set wildmenu "cli autocomplete
 " Excludes
 set wildignore+=*.o,*.obj
-set wildignore+=tmp,target,precompiled
+set wildignore+=tmp,target,precompiled,test-result
 set wildignore+=lib,modules
 set wildignore+=.git,.hg,CVS
 set wildignore+=*.*.db "Hypersonic db files
@@ -171,4 +171,4 @@ inoremap <C-space> <C-x><C-o>
 
 "Flush command-t buffer
 nnoremap <Leader>f :CommandTFlush<CR>
-
+nnoremap <Leader>b :CommandTBuffer<CR>
