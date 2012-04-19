@@ -37,14 +37,17 @@ snippet entity
 	  );
 	}
 snippet test
-	import org.junit.*;
+	import org.junit.Test;
+	import org.junit.Before;
+	import org.junit.After;
 
 	import models.*;
 	import play.mvc.*;
 	import play.test.*;
 	import play.libs.F.*;
 	import play.mvc.Http.*;
-
+	
+	import static org.mockito.Mockito.*;
 	import static play.test.Helpers.*;
 	import static org.hamcrest.CoreMatchers.*;
 	import static org.junit.Assert.*;
