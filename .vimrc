@@ -65,6 +65,7 @@ set nowritebackup
 set noswapfile
 
 " == Invisible chars ==
+"
 " https://github.com/robb/.dotfiles/blob/master/vim/.vimrc.symlink
 " Display invisible characters
 "
@@ -93,8 +94,8 @@ endif
 "
 " NonText    affects eol, extends and precedes
 " SpecialKey affects nbsp, tab and trail
-highlight NonText ctermfg=DarkGrey
-highlight SpecialKey ctermfg=DarkGrey
+"highlight NonText ctermfg=DarkGrey
+"highlight SpecialKey ctermfg=DarkGrey
 
 """""""""""""""""
 " FILE SPECIFIC "
@@ -126,7 +127,7 @@ autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 col
 let javascript_enable_domhtmlcss=1
 
 " java 
-autocmd FileType java setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=80
+autocmd FileType java setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=80
 
 autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
 
@@ -148,7 +149,7 @@ if has("gui_macvim")
  let g:solarized_termtrans=1
  let g:solarized_termcolors=256
  let g:solarized_contrast="high"
- let g:solarized_visibility="high"
+ let g:solarized_visibility="normal"
  colorscheme solarized
 endif
 
