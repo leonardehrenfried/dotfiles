@@ -187,7 +187,7 @@ nnoremap <C-Tab> <C-W>W
 "close buffer
 nnoremap <C-C> :Bclose<CR>
 
-" cycle through buffers
+" cycle through windows 
 nnoremap <A-D-Left> :bnext<CR>
 nnoremap <A-D-Right> :bprevious<CR>
 
@@ -202,6 +202,12 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "omnicomplete
 inoremap <C-space> <C-x><C-o> 
 
-"Flush command-t buffer
-nnoremap <Leader>f :CommandTFlush<CR>
-nnoremap <Leader>b :CommandTBuffer<CR>
+"Command-t buffer
+nnoremap tt :CommandT<CR>
+nnoremap tf :CommandTFlush<CR>
+nnoremap tb :CommandTBuffer<CR>
+
+"NERDTree
+
+nnoremap nt :NERDTreeToggle<CR>
+
