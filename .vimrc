@@ -209,5 +209,5 @@ nnoremap tb :CommandTBuffer<CR>
 
 "NERDTree
 
-nnoremap nt :NERDTreeToggle<CR>
+nnoremap nt :NERDTreeToggle<CR><C-W>=
 
