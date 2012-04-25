@@ -208,6 +208,6 @@ nnoremap tf :CommandTFlush<CR>
 nnoremap tb :CommandTBuffer<CR>
 
 "NERDTree
-
 nnoremap nt :NERDTreeToggle<CR><C-W>=
+nnoremap nf :NERDTreeFocus<CR>
 
