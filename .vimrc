@@ -149,7 +149,7 @@ if has("gui_macvim")
  let g:solarized_termtrans=1
  let g:solarized_termcolors=256
  let g:solarized_contrast="high"
- let g:solarized_visibility="normal"
+ let g:solarized_visibility="low"
  colorscheme solarized
 endif
 
