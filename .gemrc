@@ -1,6 +1,5 @@
 :verbose: true
 :sources:
-  - https://gems.rubyforge.org/
   - https://rubygems.org/
 :update_sources: true
 :backtrace: false
