@@ -1,8 +1,8 @@
 snippet @t
 	@Test
-	public void ${1:Name}() throws Exception {
+	public void ${1:Name}() throws Throwable {
 		${2}
-		assertThat("snippet").isEqualTo("snippett");
+		assertThat("snippet", is("snippett"));
 	 }
 snippet @tfake
 	@Test
