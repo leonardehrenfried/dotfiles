@@ -3,5 +3,5 @@
 --type-add=java=.drl,.jelly,.project
 --type-add=ruby=.podspec
 --type-add=css=.less,.scss
---type-set=n4=.n4ml,.pmi
+--type-add=js=.coffee
 --type-set=vim=.vim
