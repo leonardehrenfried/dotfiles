@@ -80,7 +80,9 @@ set noswapfile
 "   > for tabs
 "   . for trailing spaces
 "   - for line breaks
-"
+
+" trailing whitespace
+match Todo /\s\+$/
 
 if &encoding == "utf-8" 
   set list
