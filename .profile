@@ -1,8 +1,9 @@
 export PATH=/usr/local/bin:/Users/lenni/bin:$PATH
 
-if [ -d /usr/local/Cellar/ruby/1.9.3-p125/bin ]
+GEM_PATH=`gem environment|grep "EXECUTABLE DIRECTORY"|cut -d":" -f2|sed 's/^[ \t]*//'`
+if [ -d $GEM_PATH ]
 then
-    export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p125/bin"
+    export PATH="$PATH:$GEM_PATH"
 fi
 
 if [ -d /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin ]
