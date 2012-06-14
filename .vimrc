@@ -15,7 +15,7 @@ set hidden
 set wildmenu "cli autocomplete
 " Excludes
 set wildignore+=*.o,*.obj
-set wildignore+=tmp,target,precompiled,test-result
+set wildignore+=tmp,target,precompiled,test-result,dist
 set wildignore+=*.jar,modules
 set wildignore+=.git,.hg,CVS
 set wildignore+=*.*.db "Hypersonic db files

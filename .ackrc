@@ -1,4 +1,5 @@
 --ignore-dir=target
+--ignore-dir=dist
 --ignore-dir=.metadata
 --type-add=java=.drl,.jelly,.project
 --type-add=ruby=.podspec
