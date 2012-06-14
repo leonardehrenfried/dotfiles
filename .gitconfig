@@ -32,6 +32,7 @@
 
 [alias]
     stat = status -sb
+    author-stats = shortlog -s -n
     wdiff = diff --word-diff
     preview = commit --dry-run -a --short
     dstat   = diff --stat
