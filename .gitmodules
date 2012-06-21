@@ -37,9 +37,6 @@
 [submodule ".vim/bundle/vim-scala"]
 	path = .vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
-[submodule ".vim/bundle/vim-bclose"]
-	path = .vim/bundle/vim-bclose
-	url = https://github.com/rwfitzge/vim-bclose.git
 [submodule ".vim/bundle/xmledit"]
 	path = .vim/bundle/xmledit
 	url = https://github.com/sukima/xmledit.git

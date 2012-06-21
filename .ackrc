@@ -1,8 +1,8 @@
 --ignore-dir=target
 --ignore-dir=dist
 --ignore-dir=.metadata
---type-add=java=.drl,.jelly,.project
---type-add=ruby=.podspec
+--type-add=java=.drl,.jelly,.project,.jobConfig
+--type-add=ruby=.podspec,.pp
 --type-add=css=.less,.scss
 --type-add=js=.coffee
 --type-set=vim=.vim
