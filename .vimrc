@@ -83,7 +83,7 @@ set noswapfile
 
 " trailing whitespace
 match Todo /\s\+$/
-autocmd BufWritePre *.coffee :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 if &encoding == "utf-8" 
   set list
