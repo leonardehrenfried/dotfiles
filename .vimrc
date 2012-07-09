@@ -14,7 +14,7 @@ syntax on
 set hidden
 set wildmenu "cli autocomplete
 " Excludes
-set wildignore+=*.o,*.obj
+set wildignore+=*.o,*.obj,*.pyc
 set wildignore+=tmp,target,precompiled,test-result,dist
 set wildignore+=*.jar,modules
 set wildignore+=.git,.hg,CVS
@@ -85,7 +85,7 @@ set noswapfile
 match Todo /\s\+$/
 autocmd BufWritePre * :%s/\s\+$//e
 
-if &encoding == "utf-8" 
+if &encoding == "utf-8"
   set list
   set listchars=tab:▸\ ,trail:.,eol:¬
 else
@@ -110,7 +110,7 @@ autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
 \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 let python_highlight_all=1
 
-" ruby 
+" ruby
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
 
 " xml/html
@@ -129,7 +129,7 @@ autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 col
 "autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
 let javascript_enable_domhtmlcss=1
 
-" java 
+" java
 autocmd FileType java setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=80
 
 autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -139,14 +139,14 @@ autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
 """"""""""""""""
 
 "Windows specific
-if has('win32') 
+if has('win32')
  set guifont=Consolas
  colorscheme wombat
  set lines=999 columns=120
 endif
 
 "OS X specific
-if has("gui_macvim") 
+if has("gui_macvim")
  set guifont=Monaco
  set background=dark
  let g:solarized_termtrans=1
@@ -190,7 +190,7 @@ nnoremap <C-Tab> <C-W>W
 "close buffer
 nnoremap <C-C> :Bclose<CR>
 
-" cycle through windows 
+" cycle through windows
 nnoremap <A-D-Left> :bnext<CR>
 nnoremap <A-D-Right> :bprevious<CR>
 
@@ -203,7 +203,7 @@ nnoremap <silent> <C-Left> :tabprevious<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 "omnicomplete
-inoremap <C-space> <C-x><C-o> 
+inoremap <C-space> <C-x><C-o>
 
 "Command-t buffer
 nnoremap tt :CommandT<CR>
