@@ -147,6 +147,8 @@ endif
 
 "OS X specific
 if has("gui_macvim")
+ set guioptions-=r
+ set guioptions-=L
  set guifont=Monaco
  set background=dark
  let g:solarized_termtrans=1
