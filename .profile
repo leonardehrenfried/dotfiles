@@ -40,15 +40,15 @@ PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 # git autocomplete
 COMPLETION=/usr/local/etc/bash_completion.d/git-completion.bash
-if [ -f $COMPLETION ] 
-then 
+if [ -f $COMPLETION ]
+then
     source $COMPLETION
 fi
 
 # host specific email address for git
 # see http://lenni.info/blog/?p=510
-if [ -f .host-specific.sh ] 
-then 
+if [ -f .host-specific.sh ]
+then
     source .host-specific.sh
 fi
 
@@ -59,3 +59,5 @@ export GIT_AUTHOR_EMAIL=$EMAIL
 export GIT_COMMITTER_EMAIL=$EMAIL
 
 export MAVEN_OPTS=-Xmx512m
+
+alias ll='ls -l'
