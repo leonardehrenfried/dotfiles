@@ -17,7 +17,7 @@ then
 fi
 
 #create the symlinks for all dotfiles
-declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc .cvsignore .npmrc bin .ssh/config)
+declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc .cvsignore .npmrc .ssh/config)
 
 for i in "${dotfiles[@]}"
 do
@@ -26,17 +26,23 @@ do
     ln -sf `pwd`/$i ~/$i
 done
 
+echo "Symlinking bin"
+rm -rf ~/bin
+ln -sf `pwd`/bin/ ~/bin
+
 echo ""
 echo "*** Checking out git submodules ***"
 # setting up the git submodules
-git submodule init 
+git submodule init
 git submodule update
 git submodule foreach 'git checkout master && git pull'
 
 echo ""
 echo "*** Compiling command-t ***"
 cd .vim/bundle/command-t/ruby/command-t
+set +e
 make clean
+set -e
 ruby extconf.rb
 make
 
