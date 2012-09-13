@@ -73,6 +73,9 @@
 [submodule ".vim/bundle/bclose.vim"]
 	path = .vim/bundle/bclose.vim
 	url = https://github.com/rbgrouleff/bclose.vim.git
-[submodule ".vim/bundle/play2vim"]
-	path = .vim/bundle/play2vim
-	url = https://github.com/gre/play2vim.git
+[submodule ".vim/bundle/matchit.zip"]
+	path = .vim/bundle/matchit.zip
+	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule ".vim/bundle/numbers.vim"]
+	path = .vim/bundle/numbers.vim
+	url = https://github.com/myusuf3/numbers.vim.git
