@@ -73,3 +73,6 @@
 [submodule ".vim/bundle/bclose.vim"]
 	path = .vim/bundle/bclose.vim
 	url = https://github.com/rbgrouleff/bclose.vim.git
+[submodule ".vim/bundle/play2vim"]
+	path = .vim/bundle/play2vim
+	url = https://github.com/gre/play2vim.git
