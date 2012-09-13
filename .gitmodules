@@ -76,6 +76,3 @@
 [submodule ".vim/bundle/matchit.zip"]
 	path = .vim/bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip.git
-[submodule ".vim/bundle/numbers.vim"]
-	path = .vim/bundle/numbers.vim
-	url = https://github.com/myusuf3/numbers.vim.git
