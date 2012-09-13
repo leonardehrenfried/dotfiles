@@ -216,3 +216,13 @@ nnoremap tb :CommandTBuffer<CR>
 nnoremap nt :NERDTreeToggle<CR><C-W>=
 nnoremap nf :NERDTreeFocus<CR>
 
+"Toggle relative
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap nn :call NumberToggle()<cr>
