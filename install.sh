@@ -5,8 +5,20 @@ OS=`uname`
 
 if [ "$OS" == "Darwin" ]
 then
-    echo "*** You are on OS X. Setting defaults. ***"
+    echo "Detected OS X"
+    echo " -> Setting defaults"
     sh ./osx-defaults.sh
+
+    target="/Users/$USER/Library/Fonts/Inconsolata.ttf"
+    if [ ! -f $target ]
+    then
+      echo " -> Installing Inconsolata"
+      url="http://googlefontdirectory.googlecode.com/hg/inconsolata/Inconsolata.ttf"
+      curl $url -o $target
+      sudo atsutil databases -remove
+      sudo atsutil server -shutdown
+      sudo atsutil server -ping
+    fi
 fi
 
 #create ssh dir if it doesn't exist

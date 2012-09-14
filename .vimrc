@@ -81,10 +81,6 @@ set noswapfile
 "   . for trailing spaces
 "   - for line breaks
 
-" trailing whitespace
-match Todo /\s\+$/
-autocmd BufWritePre * :%s/\s\+$//e
-
 if &encoding == "utf-8"
   set list
   set listchars=tab:▸\ ,trail:.,eol:¬
@@ -99,6 +95,10 @@ endif
 " SpecialKey affects nbsp, tab and trail
 "highlight NonText ctermfg=DarkGrey
 "highlight SpecialKey ctermfg=DarkGrey
+
+" trailing whitespace
+match Todo /\s\+$/
+autocmd BufWritePre * :%s/\s\+$//e
 
 """""""""""""""""
 " FILE SPECIFIC "
