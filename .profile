@@ -12,8 +12,8 @@ then
 fi
 
 export PYTHONPATH=/Users/lenni/dev/python-lib:/Users/lenni/dev/edd/:$PYTHONPATH
-export DJANGO_SETTINGS_MODULE=edd.settings
 export EDITOR=vi
+export MANPATH=/usr/local/share/man:$MANPATH
 
 # ls colour output
 export LS_OPTIONS='--color=auto'

@@ -73,3 +73,9 @@
 [submodule ".vim/bundle/bclose.vim"]
 	path = .vim/bundle/bclose.vim
 	url = https://github.com/rbgrouleff/bclose.vim.git
+[submodule ".vim/bundle/matchit.zip"]
+	path = .vim/bundle/matchit.zip
+	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule ".vim/bundle/railscasts-theme"]
+	path = .vim/bundle/railscasts-theme
+	url = https://github.com/oguzbilgic/sexy-railscasts-theme.git
