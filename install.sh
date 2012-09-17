@@ -13,7 +13,7 @@ then
     if [ ! -f $target ]
     then
       echo " -> Installing Inconsolata"
-      url="http://googlefontdirectory.googlecode.com/hg/inconsolata/Inconsolata.ttf"
+      url="https://dl.dropbox.com/s/f26mjfhi0yvqtp2/Inconsolata-Regular.ttf?dl=1"
       curl $url -o $target
       sudo atsutil databases -remove
       sudo atsutil server -shutdown
