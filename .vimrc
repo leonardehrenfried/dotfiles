@@ -130,7 +130,7 @@ autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 col
 let javascript_enable_domhtmlcss=1
 
 " java
-autocmd FileType java setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=80
+autocmd FileType java setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=80
 
 autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
 
