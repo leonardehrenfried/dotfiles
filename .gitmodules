@@ -73,6 +73,9 @@
 [submodule ".vim/bundle/matchit.zip"]
 	path = .vim/bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule ".vim/bundle/railscasts-theme"]
+	path = .vim/bundle/railscasts-theme
+	url = https://github.com/oguzbilgic/sexy-railscasts-theme.git
 [submodule ".vim/bundle/AutoTag"]
 	path = .vim/bundle/AutoTag
 	url = https://github.com/vim-scripts/AutoTag.git
