@@ -16,7 +16,7 @@ set wildmenu "cli autocomplete
 " Excludes
 set wildignore+=*.o,*.obj,*.pyc
 set wildignore+=tmp,target,precompiled,test-result,dist
-set wildignore+=*.jar,modules
+set wildignore+=*.jar,modules,node_modules
 set wildignore+=.git,.hg,CVS
 set wildignore+=*.*.db "Hypersonic db files
 set showcmd
@@ -225,4 +225,4 @@ function! NumberToggle()
   endif
 endfunc
 
-nnoremap nn :call NumberToggle()<cr>
+nnoremap tn :call NumberToggle()<cr>
