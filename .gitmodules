@@ -76,3 +76,6 @@
 [submodule ".vim/bundle/AutoTag"]
 	path = .vim/bundle/AutoTag
 	url = https://github.com/vim-scripts/AutoTag.git
+[submodule ".vim/bundle/puppet"]
+	path = .vim/bundle/puppet
+	url = git://github.com/rodjek/vim-puppet.git
