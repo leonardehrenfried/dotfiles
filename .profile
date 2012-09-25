@@ -61,3 +61,4 @@ export GIT_COMMITTER_EMAIL=$EMAIL
 export MAVEN_OPTS=-Xmx512m
 
 alias ll='ls -l'
+alias jsonpretty='python -mjson.tool'
