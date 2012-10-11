@@ -214,7 +214,7 @@ nnoremap tb :CommandTBuffer<CR>
 
 "NERDTree
 nnoremap nt :NERDTreeToggle<CR><C-W>=
-nnoremap nf :NERDTreeFocus<CR>
+nnoremap nf :NERDTreeFind<CR>
 
 "Toggle relative
 function! NumberToggle()
