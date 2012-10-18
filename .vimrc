@@ -168,14 +168,12 @@ endif
 " KEY MAPPINGS "
 """"""""""""""""
 " disable arrow keys
-noremap  <Up> ""
-noremap! <Up> <Esc>
-noremap  <Down> ""
-noremap! <Down> <Esc>
-noremap  <Left> ""
-noremap! <Left> <Esc>
-noremap  <Right> ""
-noremap! <Right> <Esc>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
 
 nmap <C-D> "_dd
 imap <C-D> <Esc>"_dd
