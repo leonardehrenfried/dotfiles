@@ -149,7 +149,7 @@ endif
 if has("gui_macvim")
  set guioptions-=r
  set guioptions-=L
- set guifont=Monaco
+ set guifont=Source\ Code\ Pro:h11
  set background=dark
  let g:solarized_termtrans=1
  let g:solarized_termcolors=256
@@ -232,4 +232,4 @@ function! NumberToggle()
   endif
 endfunc
 
-nnoremap tn :call NumberToggle()<cr>
+nnoremap tn :call NumberToggle()<CR>
