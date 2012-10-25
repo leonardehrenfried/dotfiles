@@ -60,5 +60,15 @@ export GIT_COMMITTER_EMAIL=$EMAIL
 
 export MAVEN_OPTS=-Xmx512m
 
-alias ll='ls -la'
+os=`uname`
+command="ls -lah"
+if [ "$os" == "Linux" ]
+then
+  alias ll="$command --color"
+fi
+
+if [ "$os" == "Darwin" ]
+then
+  alias ll="$command"
+fi
 alias jsonpretty='python -mjson.tool'
