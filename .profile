@@ -65,6 +65,7 @@ command="ls -lah"
 if [ "$os" == "Linux" ]
 then
   alias ll="$command --color"
+  alias ack="ack-grep"
 fi
 
 if [ "$os" == "Darwin" ]
