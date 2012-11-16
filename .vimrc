@@ -5,7 +5,7 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'"
+Bundle 'gmarik/vundle'
 
 set nocompatible
 filetype indent plugin on
