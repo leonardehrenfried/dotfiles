@@ -4,8 +4,34 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required!
 Bundle 'gmarik/vundle'
+
+Bundle 'Raimondi/delimitMate'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'wincent/Command-T'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'skammer/vim-css-color'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'lenniboy/vim-less'
+Bundle 'pangloss/vim-javascript'
+Bundle 'godlygeek/tabular'
+Bundle 'vim-scripts/Rename'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'sukima/xmledit'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/snipmate-snippets'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-fugitive'
+Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdtree'
+Bundle 'othree/html5.vim'
+Bundle 'rbgrouleff/bclose.vim'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/AutoTag'
+Bundle 'rodjek/vim-puppet'
 
 set nocompatible
 filetype indent plugin on
