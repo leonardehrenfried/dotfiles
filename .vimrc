@@ -1,5 +1,12 @@
 " Author: Leonard Ehrenfried <http://lenni.info>
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'"
+
 set nocompatible
 filetype indent plugin on
 syntax on
