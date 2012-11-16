@@ -1,12 +1,5 @@
 " Author: Leonard Ehrenfried <http://lenni.info>
 
-" needs to be there so vim has a 0 exit code when using pathogen
-" http://andrewho.co.uk/weblog/vim-pathogen-with-mutt-and-git
-"filetype on
-"filetype off
-
-call pathogen#infect()
-
 set nocompatible
 filetype indent plugin on
 syntax on
