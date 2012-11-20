@@ -43,11 +43,8 @@ rm -rf ~/bin
 ln -sf `pwd`/bin/ ~/bin
 
 echo ""
-echo "*** Checking out git submodules ***"
-# setting up the git submodules
-#git submodule init
-#git submodule update
-#git submodule foreach 'git checkout master && git pull'
+echo "*** Checking out git submodules with vundle***"
+vim +BundleInstall +qall
 
 echo ""
 echo "*** Compiling command-t ***"
