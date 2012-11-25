@@ -45,6 +45,7 @@ set wildmenu "cli autocomplete
 set wildignore+=*.o,*.obj,*.pyc
 set wildignore+=tmp,target,precompiled,test-result,dist
 set wildignore+=*.jar,modules,node_modules
+set wildignore+=_site
 set wildignore+=.git,.hg,CVS
 set wildignore+=*.*.db "Hypersonic db files
 set showcmd
