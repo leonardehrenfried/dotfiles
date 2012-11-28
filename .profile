@@ -11,7 +11,6 @@ then
     export PATH="$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin"
 fi
 
-export PYTHONPATH=/Users/lenni/dev/python-lib:/Users/lenni/dev/edd/:$PYTHONPATH
 export EDITOR=vi
 export MANPATH=/usr/local/share/man:$MANPATH
 
