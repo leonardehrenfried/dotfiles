@@ -34,6 +34,7 @@ Bundle 'vim-scripts/AutoTag'
 Bundle 'rodjek/vim-puppet'
 Bundle 'bullfight/sexy-railscasts-theme'
 Bundle 'tpope/vim-markdown'
+Bundle 'Lokaltog/vim-powerline'
 
 set nocompatible
 filetype indent plugin on
