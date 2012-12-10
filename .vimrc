@@ -35,6 +35,7 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'bullfight/sexy-railscasts-theme'
 Bundle 'tpope/vim-markdown'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'nvie/vim-flake8'
 
 set nocompatible
 filetype indent plugin on
