@@ -3,3 +3,4 @@
 .vim/.netrwhist
 .vim/bundle
 bin/bin
+bin/go
