@@ -36,10 +36,13 @@ Bundle 'bullfight/sexy-railscasts-theme'
 Bundle 'tpope/vim-markdown'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nvie/vim-flake8'
+Bundle 'Shougo/neocomplcache'
 
 set nocompatible
 filetype indent plugin on
 syntax on
+
+let g:neocomplcache_enable_at_startup = 1
 
 set hidden
 set wildmenu "cli autocomplete
