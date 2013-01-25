@@ -2,6 +2,7 @@
 --ignore-dir=dist
 --ignore-dir=.metadata
 --ignore-dir=node_modules
+--ignore-dir=.idea
 --type-add=java=.drl,.jelly,.project,.jobConfig
 --type-add=ruby=.podspec,.pp
 --type-add=css=.less,.scss
