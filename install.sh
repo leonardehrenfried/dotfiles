@@ -44,7 +44,7 @@ ln -sf `pwd`/bin/ ~/bin
 
 echo ""
 echo "*** Checking out git submodules with vundle***"
-vim +BundleInstall +qall
+vim +BundleInstall! +qall
 
 echo ""
 echo "*** Compiling command-t ***"
