@@ -37,6 +37,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nvie/vim-flake8'
 Bundle 'Shougo/neocomplcache'
+Bundle 'jnurmine/Zenburn'
 
 set nocompatible
 filetype indent plugin on
@@ -61,6 +62,8 @@ set incsearch
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
+" search for tags in parent folder
+set tags=tags;/
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
