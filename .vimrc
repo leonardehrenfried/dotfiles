@@ -187,7 +187,7 @@ endif
 if has("gui_macvim")
  set guioptions-=r
  set guioptions-=L
- set guifont=Source\ Code\ Pro:h11
+ set guifont=Source\ Code\ Pro\ Bold:h12
  set background=dark
  let g:solarized_termtrans=1
  let g:solarized_termcolors=256
