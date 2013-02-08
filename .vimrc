@@ -38,6 +38,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'nvie/vim-flake8'
 Bundle 'Shougo/neocomplcache'
 Bundle 'jnurmine/Zenburn'
+Bundle 'vim-scripts/Atom'
 
 set nocompatible
 filetype indent plugin on
