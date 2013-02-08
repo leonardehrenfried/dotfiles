@@ -46,6 +46,15 @@ syntax on
 
 let g:neocomplcache_enable_at_startup = 1
 
+
+function! SortScala()
+  call cursor(1, 1)
+  let start = search('^import') "find first line with import
+  let end = search('^\(import\|\n\)\@!') "find first non-import line
+  let end = end - 1
+  execute 'normal '.start.','.end.'sort <CR>'
+endfunction
+
 set hidden
 set wildmenu "cli autocomplete
 " Excludes
