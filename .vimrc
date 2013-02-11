@@ -52,7 +52,7 @@ function! SortScala()
   let start = search('^import') "find first line with import
   let end = search('^\(import\|\n\)\@!') "find first non-import line
   let end = end - 1
-  execute 'normal '.start.','.end.'sort <CR>'
+  execute start','end'sort u'
 endfunction
 
 set hidden
