@@ -46,6 +46,41 @@ syntax on
 
 let g:neocomplcache_enable_at_startup = 1
 
+function! Imports()
+  let curr = 0
+  let first_line = -1
+  let last_line = -1
+  let trailing_newlines = 0
+  let imports = []
+
+  " loop over lines in buffer
+  while curr < line('$')
+
+    let line = getline(curr)
+
+    if line =~ "^import"
+      if first_line == -1
+        let first_line = curr
+      endif
+      call add(imports, line)
+      let trailing_newlines = 0
+    elseif empty(line)
+      let trailing_newlines = trailing_newlines + 1
+    elseif first_line != -1
+      let last_line = curr - trailing_newlines - 1
+      " break out when you have found the first non-import line
+      break
+    endif
+
+    let curr = curr + 1
+  endwhile
+
+  echo "firstline ". first_line
+  echo "lastline ". last_line
+  echo imports
+
+endfunction
+
 
 function! SortScala()
   call cursor(1, 1)
