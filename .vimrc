@@ -221,6 +221,10 @@ autocmd FileType java setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 co
 
 autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
 
+" Fix common misspellings
+
+iab lenght length
+
 """"""""""""""""
 " CONDITIONALS "
 """"""""""""""""
