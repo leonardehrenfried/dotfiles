@@ -70,3 +70,4 @@ then
   alias ll="$command"
 fi
 alias jsonpretty='python -mjson.tool'
+alias maketags='ctags -R .'
