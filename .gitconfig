@@ -48,7 +48,7 @@
     tool = mvim
 
 [mergetool "mvim"]
-    cmd = mvim \"+Gdiff\" $MERGED
+    cmd = mvim -f \"+Gdiff\" $MERGED
 
 [mergetool]
     keepBackup = false
