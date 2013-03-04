@@ -246,7 +246,7 @@ if has("gui_macvim")
  let g:solarized_termcolors=256
  let g:solarized_contrast="high"
  let g:solarized_visibility="low"
- colorscheme solarized
+ colorscheme atom
 endif
 
 "GUI specific
