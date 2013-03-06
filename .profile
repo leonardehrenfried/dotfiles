@@ -34,6 +34,12 @@ function parse_git_branch {
 export PS1='\n\t ${PINK}\u ${D}at ${ORANGE}\h ${D}in ${GREEN}\w ${CYAN}`parse_git_branch`\
 ${D}\n$ '
 
+function up(){
+  for i in $(seq 1 $1); do
+    cd ..
+  done
+}
+
 # setting the current dir as the window title
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
