@@ -39,6 +39,7 @@ Bundle 'nvie/vim-flake8'
 Bundle 'Shougo/neocomplcache'
 Bundle 'jnurmine/Zenburn'
 Bundle 'vim-scripts/Atom'
+Bundle 'airblade/vim-gitgutter'
 
 set nocompatible
 filetype indent plugin on
@@ -80,7 +81,6 @@ function! Imports()
   echo imports
 
 endfunction
-
 
 function! SortScala()
   call cursor(1, 1)
@@ -225,6 +225,8 @@ autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 iab lenght length
 
+" fix weird colors for git-gutter
+highlight clear SignColumn
 """"""""""""""""
 " CONDITIONALS "
 """"""""""""""""
