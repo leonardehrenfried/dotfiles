@@ -225,8 +225,6 @@ autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 iab lenght length
 
-" fix weird colors for git-gutter
-highlight clear SignColumn
 """"""""""""""""
 " CONDITIONALS "
 """"""""""""""""
@@ -257,6 +255,8 @@ if has("gui_running")
   set guioptions-=T
 endif
 
+" fix weird colors for git-gutter
+highlight clear SignColumn
 """"""""""""""""
 " KEY MAPPINGS "
 """"""""""""""""
