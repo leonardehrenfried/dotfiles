@@ -19,3 +19,4 @@
 --regex-coffee=/^[ \t]*([A-Za-z.]+)[ \t]+=[^->\n]*$/\1/v,variable/
 
 --exclude=target
+--exclude=fallback
