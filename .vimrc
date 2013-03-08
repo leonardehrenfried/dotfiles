@@ -47,12 +47,14 @@ syntax on
 
 let g:neocomplcache_enable_at_startup = 1
 
-function! Imports()
+function! SortScalaImports()
   let curr = 0
   let first_line = -1
   let last_line = -1
   let trailing_newlines = 0
-  let imports = []
+  let java_scala_imports = []
+  let first_party_imports = []
+  let third_party_imports = []
 
   " loop over lines in buffer
   while curr < line('$')
@@ -63,7 +65,15 @@ function! Imports()
       if first_line == -1
         let first_line = curr
       endif
-      call add(imports, line)
+
+      if line =~ '^import \(java\|scala\)\.'
+        call add(java_scala_imports, line)
+      elseif line =~ '^import \(de.\|controller\|util\)'
+        call add(first_party_imports, line)
+      else
+        call add(third_party_imports, line)
+      endif
+
       let trailing_newlines = 0
     elseif empty(line)
       let trailing_newlines = trailing_newlines + 1
@@ -76,9 +86,20 @@ function! Imports()
     let curr = curr + 1
   endwhile
 
-  echo "firstline ". first_line
-  echo "lastline ". last_line
-  echo imports
+  call cursor(first_line - 1, 0)
+  let to_delete = last_line - first_line + 2
+  execute 'd'to_delete
+
+  call sort(java_scala_imports)
+  call sort(first_party_imports)
+  call sort(third_party_imports)
+
+  call append(line("."), "")
+  call append(line("."), first_party_imports)
+  call append(line("."), "")
+  call append(line("."), third_party_imports)
+  call append(line("."), "")
+  call append(line("."), java_scala_imports)
 
 endfunction
 
