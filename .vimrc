@@ -103,18 +103,6 @@ function! SortScalaImports()
 
 endfunction
 
-function! SortScala()
-  call cursor(1, 1)
-  let start = search('^import') "find first line with import
-  let end = search('^\(import\|\n\)\@!') "find first non-import line
-  if getline(end) == "\n"
-    let end = end - 1
-  else
-    let end = end - 2
-  endif
-  execute start','end'sort u'
-endfunction
-
 set hidden
 set wildmenu "cli autocomplete
 " Excludes
