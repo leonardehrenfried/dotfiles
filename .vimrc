@@ -141,7 +141,7 @@ match Todo /\s\+$/
 autocmd BufWritePre * :%s/\s\+$//e
 
 """""""""""""""""
-" FILE SPECIFIC "
+" LANGUAGE SPECIFIC "
 """""""""""""""""
 
 " python
@@ -172,6 +172,10 @@ let javascript_enable_domhtmlcss=1
 " java
 autocmd FileType java setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=80
 
+" scala
+let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\)'
+
+" xml
 autocmd FileType xml autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Fix common misspellings
