@@ -283,3 +283,7 @@ function! NumberToggle()
 endfunc
 
 nnoremap tn :call NumberToggle()<CR>
+
+" got to next gitgutter hunk
+nmap <silent> ]h :GitGutterNextHunk<CR>
+nmap <silent> [h :GitGutterPrevHunk<CR>]
