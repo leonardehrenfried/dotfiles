@@ -4,3 +4,4 @@
 .vim/bundle
 bin/bin
 bin/go
+/macvim
