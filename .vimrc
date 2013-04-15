@@ -21,7 +21,7 @@ Bundle 'sukima/xmledit'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
-Bundle 'honza/snipmate-snippets'
+Bundle 'honza/vim-snippets'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
@@ -40,6 +40,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'jnurmine/Zenburn'
 Bundle 'vim-scripts/Atom'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'terryma/vim-multiple-cursors'
 
 set nocompatible
 filetype indent plugin on

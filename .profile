@@ -50,6 +50,8 @@ then
     source $COMPLETION
 fi
 
+[[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
+
 # host specific email address for git
 # see http://lenni.info/blog/?p=510
 if [ -f .host-specific.sh ]
