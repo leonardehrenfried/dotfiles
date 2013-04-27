@@ -29,7 +29,7 @@ then
 fi
 
 #create the symlinks for all dotfiles
-declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc .cvsignore .npmrc .ctags .ssh/config)
+declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc .cvsignore .npmrc .ctags .rspec .ssh/config)
 
 for i in "${dotfiles[@]}"
 do
