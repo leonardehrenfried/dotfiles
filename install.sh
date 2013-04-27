@@ -44,6 +44,11 @@ ln -sf `pwd`/bin/ ~/bin
 
 echo ""
 echo "*** Checking out git submodules with vundle***"
+
+if [ -f './vim/bundle/vundle' ];
+then
+  git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
+fi
 vim +BundleInstall! +qall
 
 echo ""
