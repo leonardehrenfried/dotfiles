@@ -79,3 +79,4 @@ then
 fi
 alias jsonpretty='python -mjson.tool'
 alias maketags='ctags -R .'
+alias rmmux='rm ~/.ssh/mux-*'
