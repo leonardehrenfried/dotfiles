@@ -80,3 +80,5 @@ fi
 alias jsonpretty='python -mjson.tool'
 alias maketags='ctags -R .'
 alias rmmux='rm ~/.ssh/mux-*'
+alias list-ssh-tunnels='ps aux|grep "ssh -f"|grep -v grep'
+alias myip='ifconfig | grep "inet " | cut -d" " -f 2'
