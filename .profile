@@ -18,6 +18,8 @@ export MANPATH=/usr/local/share/man:$MANPATH
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
+export LC_CTYPE='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
 
 # color definitions
 D=$'\e[37;40m'
