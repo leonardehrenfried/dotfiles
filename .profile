@@ -81,3 +81,10 @@ then
 fi
 alias jsonpretty='python -mjson.tool'
 alias maketags='ctags -R .'
+alias rmmux='rm ~/.ssh/mux-*'
+alias list-ssh-tunnels='ps aux|grep "ssh -f"|grep -v grep'
+alias myip='ifconfig | grep "inet " | cut -d" " -f 2'
+alias mvim2='mvim +vsplit -c ":set lines=999 columns=999" $@'
+alias mvim3='mvim +vsplit +vsplit -c ":set lines=999 columns=999" $@'
+alias rvim='mvim --remote $@ ":CommmandTFlush"'
+alias serve='python -m SimpleHTTPServer'

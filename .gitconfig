@@ -40,6 +40,7 @@
     dstat   = diff --stat
     cdiff   = diff --cached
     lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
+    count = rev-list --count HEAD
 
 [branch]
     autosetuprebase = always
