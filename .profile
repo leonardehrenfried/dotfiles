@@ -22,6 +22,7 @@ export LC_CTYPE='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
 # color definitions
+export GREP_COLOR='1;37;41'
 D=$'\e[37;40m'
 PINK=$'\e[35;40m'
 GREEN=$'\e[32;40m'
@@ -83,6 +84,7 @@ if [ "$os" == "Darwin" ]
 then
   alias ll="$command"
 fi
+alias grep='grep --color=auto'
 alias jsonpretty='python -mjson.tool'
 alias maketags='ctags -R .'
 alias rmmux='rm ~/.ssh/mux-*'
