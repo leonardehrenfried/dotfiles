@@ -46,7 +46,10 @@ set nocompatible
 filetype indent plugin on
 syntax on
 
+let g:acp_enableAtStartup = 0
 let g:neocomplcache_enable_at_startup = 1
+"enable only manual complete
+let g:neocomplcache_disable_auto_complete = 1
 
 set hidden
 set wildmenu "cli autocomplete
@@ -264,7 +267,7 @@ nnoremap <silent> <C-Left> :tabprevious<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 "omnicomplete
-inoremap <C-space> <C-x><C-o>
+inoremap <expr><Tab>  neocomplcache#start_manual_complete()
 
 "Command-t buffer
 nnoremap tt :CommandT<CR>
