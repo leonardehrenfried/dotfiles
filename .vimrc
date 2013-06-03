@@ -267,7 +267,7 @@ nnoremap <silent> <C-Left> :tabprevious<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 "omnicomplete
-inoremap <expr><Tab>  neocomplcache#start_manual_complete()
+inoremap <expr><C-space> neocomplcache#start_manual_complete()
 
 "Command-t buffer
 nnoremap tt :CommandT<CR>
