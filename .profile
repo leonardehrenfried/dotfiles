@@ -72,4 +72,4 @@ export GIT_COMMITTER_NAME="Leonard Ehrenfried"
 
 export MAVEN_OPTS=-Xmx512m
 
-source .alias
+source ~/.alias
