@@ -281,7 +281,7 @@ nnoremap nf :NERDTreeFind<CR>
 "Toggle relative
 function! NumberToggle()
   if(&relativenumber == 1)
-    set number
+    set norelativenumber
   else
     set relativenumber
   endif
