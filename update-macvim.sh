@@ -10,7 +10,7 @@ fi
 
 cd macvim
 export CC=clang
-make clean
+make distclean
 ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope --enable-python3interp
 make
 open src/MacVim/build/Release/
