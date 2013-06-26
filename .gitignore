@@ -5,3 +5,5 @@
 bin/bin
 bin/go
 /macvim
+.sbt/plugins/project
+.sbt/plugins/target
