@@ -142,7 +142,13 @@ endif
 
 " trailing whitespace
 match Todo /\s\+$/
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * call TrimWhitespaces()
+
+function TrimWhitespaces()
+  if &filetype != "markdown"
+    :%s/\s\+$//e
+  endif
+endfunction
 
 """""""""""""""""
 " LANGUAGE SPECIFIC "
