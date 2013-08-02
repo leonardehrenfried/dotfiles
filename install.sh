@@ -29,7 +29,7 @@ then
 fi
 
 #create the symlinks for all dotfiles
-declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc .cvsignore .npmrc .ctags .rspec .ssh/config .alias .sbt/plugins)
+declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .profile .ackrc .gemrc .hgrc .cvsignore .npmrc .ctags .rspec .ssh/config .alias)
 
 for i in "${dotfiles[@]}"
 do
@@ -41,6 +41,10 @@ done
 echo "Symlinking bin"
 rm -rf ~/bin
 ln -sf `pwd`/bin/ ~/bin
+
+echo "Symlinking .sbt/plugins"
+mkdir -p ~/.sbt
+ln -sf `pwd`/.sbt/plugins ~/.sbt/plugins
 
 echo ""
 echo "*** Checking out git submodules with vundle***"
