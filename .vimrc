@@ -127,10 +127,10 @@ set noswapfile
 
 if &encoding == "utf-8"
   set list
-  set listchars=tab:▸\ ,trail:.,eol:¬
+  set listchars=tab:▸\ ,trail:.,eol:¬,nbsp:□
 else
   set list
-  set listchars=tab:>\ ,trail:.,eol:-
+  set listchars=tab:>\ ,trail:.,eol:-,nbsp:_
 endif
 
 " Color invisible characters
