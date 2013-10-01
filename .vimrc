@@ -215,13 +215,13 @@ if has("gui_macvim")
  let g:solarized_termcolors=256
  let g:solarized_contrast="high"
  let g:solarized_visibility="low"
- colorscheme atom
 endif
 
 "GUI specific
 if has("gui_running")
   set guioptions-=m
   set guioptions-=T
+  colorscheme atom
 endif
 
 " fix weird colors for git-gutter

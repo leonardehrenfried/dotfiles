@@ -50,6 +50,11 @@ function up(){
 # setting the current dir as the window title
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
+AUTOJUMP=/usr/share/autojump/autojump.sh
+if [ -f $AUTOJUMP ]
+then
+    . $AUTOJUMP
+fi
 # git autocomplete
 COMPLETION=/usr/local/etc/bash_completion.d/git-completion.bash
 if [ -f $COMPLETION ]
