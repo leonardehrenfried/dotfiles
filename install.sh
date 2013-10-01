@@ -22,10 +22,10 @@ then
 fi
 
 #create ssh dir if it doesn't exist
-if [ -f '~/.ssh/' ];
+if [ ! -d ~/.ssh/ ];
 then
-    mkdir '~/.ssh/'
     echo "Creating dir ~/.ssh"
+    mkdir ~/.ssh/
 fi
 
 #create the symlinks for all dotfiles
@@ -49,7 +49,7 @@ ln -sf `pwd`/.sbt/plugins ~/.sbt/plugins
 echo ""
 echo "*** Checking out git submodules with vundle***"
 
-if [ -f './vim/bundle/vundle' ];
+if [ ! -d .vim/bundle/vundle/ ];
 then
   git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
 fi
@@ -57,7 +57,7 @@ vim +BundleInstall! +qall
 
 echo ""
 echo "*** Compiling command-t ***"
-cd .vim/bundle/command-t/ruby/command-t
+cd .vim/bundle/Command-T/ruby/command-t
 set +e
 make clean
 set -e

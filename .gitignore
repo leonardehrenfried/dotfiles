@@ -7,3 +7,4 @@ bin/go
 /macvim
 .sbt/plugins/project
 .sbt/plugins/target
+.sbt/plugins/plugins
