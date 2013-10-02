@@ -18,19 +18,14 @@ export MANPATH=/usr/local/share/man:$MANPATH
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
+export LANG='en_US.UTF-8'
+export LANGUAGE='en_US.UTF-8'
 export LC_CTYPE='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
 # color definitions
 force_color_prompt=yes
 export GREP_COLOR='1;37;41'
-D=$'\e[37;40m'
-PINK=$'\e[35;40m'
-GREEN=$'\e[32;40m'
-ORANGE=$'\e[33;40m'
-YELLOW=$'\e[0;33m'
-RED=$'\e[0;31m'
-CYAN=$'\e[0;36m'
 RS="\[\033[0m\]"    # reset
 HC="\[\033[1m\]"    # hicolor
 UL="\[\033[4m\]"    # underline
