@@ -22,6 +22,7 @@ export LC_CTYPE='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
 # color definitions
+force_color_prompt=yes
 export GREP_COLOR='1;37;41'
 D=$'\e[37;40m'
 PINK=$'\e[35;40m'
@@ -30,6 +31,26 @@ ORANGE=$'\e[33;40m'
 YELLOW=$'\e[0;33m'
 RED=$'\e[0;31m'
 CYAN=$'\e[0;36m'
+RS="\[\033[0m\]"    # reset
+HC="\[\033[1m\]"    # hicolor
+UL="\[\033[4m\]"    # underline
+INV="\[\033[7m\]"   # inverse background and foreground
+FBLK="\[\033[30m\]" # foreground black
+FRED="\[\033[31m\]" # foreground red
+FGRN="\[\033[32m\]" # foreground green
+FYEL="\[\033[33m\]" # foreground yellow
+FBLE="\[\033[34m\]" # foreground blue
+FMAG="\[\033[35m\]" # foreground magenta
+FCYN="\[\033[36m\]" # foreground cyan
+FWHT="\[\033[37m\]" # foreground white
+BBLK="\[\033[40m\]" # background black
+BRED="\[\033[41m\]" # background red
+BGRN="\[\033[42m\]" # background green
+BYEL="\[\033[43m\]" # background yellow
+BBLE="\[\033[44m\]" # background blue
+BMAG="\[\033[45m\]" # background magenta
+BCYN="\[\033[46m\]" # background cyan
+BWHT="\[\033[47m\]" # background white
 
 # prompt
 function parse_git_dirty {
@@ -38,8 +59,8 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1='\n\t ${PINK}\u ${D}at ${ORANGE}\h ${D}in ${GREEN}\w ${CYAN}`parse_git_branch` ${YELLOW}`parse_git_dirty`\
-${D}\n$ '
+export PS1="\n\t ${FMAG}\u ${FWHT}at ${FYEL}\h ${FWHT}in ${FGRN}\w ${FBLE}`parse_git_branch` ${FYEL}`parse_git_dirty`\
+${FWHT}\n$ "
 
 function up(){
   for i in $(seq 1 $1); do
