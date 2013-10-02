@@ -82,7 +82,8 @@ set ruler
 set laststatus=2
 
 set confirm
-set visualbell t_vb=
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 set mouse=a
 set cmdheight=1
 set number        "line numbers
@@ -222,7 +223,6 @@ if has("gui_running")
   set guioptions-=m
   set guioptions-=T
   colorscheme atom
-  set t_vb=       "No flashing, visual bell
 endif
 
 " fix weird colors for git-gutter
