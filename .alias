@@ -25,3 +25,4 @@ alias timestamp='date "+%Y%m%d%H%M%S"'
 alias returncode='echo $?'
 
 alias gca='git commit -am'
+alias gvim='UBUNTU_MENUPROXY= gvim'

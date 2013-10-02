@@ -222,6 +222,7 @@ if has("gui_running")
   set guioptions-=m
   set guioptions-=T
   colorscheme atom
+  set t_vb=       "No flashing, visual bell
 endif
 
 " fix weird colors for git-gutter
