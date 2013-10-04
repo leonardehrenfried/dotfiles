@@ -18,10 +18,10 @@ export MANPATH=/usr/local/share/man:$MANPATH
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
-export LANG='en_US.UTF-8'
-export LANGUAGE='en_US.UTF-8'
-export LC_CTYPE='en_US.UTF-8'
-export LC_ALL='en_US.UTF-8'
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # color definitions
 force_color_prompt=yes
@@ -54,7 +54,7 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1="\n\t ${FMAG}\u ${FWHT}at ${FYEL}\h ${FWHT}in ${FGRN}\w ${FBLE}`parse_git_branch` ${FYEL}`parse_git_dirty`\
+PS1="\n\t ${FMAG}\u ${FWHT}at ${FYEL}\h ${FWHT}in ${FGRN}\w ${FBLE}\$(parse_git_branch) ${FYEL}\$(parse_git_dirty)\
 ${FWHT}\n$ "
 
 function up(){
