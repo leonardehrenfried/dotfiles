@@ -66,25 +66,25 @@ function up(){
 # setting the current dir as the window title
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
-AUTOJUMP=/usr/share/autojump/autojump.sh
-if [ -f $AUTOJUMP ]
-then
-    . $AUTOJUMP
-fi
-# git autocomplete
-COMPLETION=/usr/local/etc/bash_completion.d/git-completion.bash
-if [ -f $COMPLETION ]
-then
-    source $COMPLETION
-fi
+#create the symlinks for all dotfiles
+declare -a files=(/usr/share/autojump/autojump.sh
+                  /usr/local/etc/autojump.sh
+                  /usr/local/etc/bash_completion.d/git-completion.bash
+                  /etc/bash_completion.d/git)
 
-[[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
+for i in "${files[@]}"
+do
+  if [ -f $i ]
+  then
+    source $i
+  fi
+done
 
 # host specific email address for git
 # see http://lenni.info/blog/?p=510
 if [ -f .host-specific.sh ]
 then
-    source .host-specific.sh
+  source .host-specific.sh
 fi
 
 #export these variables so that they will be sent over SSH

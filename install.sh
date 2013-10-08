@@ -33,7 +33,6 @@ declare -a dotfiles=(.vimrc .vim .gitconfig .inputrc .bashrc .ackrc .gemrc .hgrc
 
 for i in "${dotfiles[@]}"
 do
-    :
     echo "Symlinking $i"
     ln -sf `pwd`/$i ~/$i
 done
