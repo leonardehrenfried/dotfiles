@@ -27,3 +27,5 @@ alias returncode='echo $?'
 alias gca='git commit -am'
 alias gsc='git svn dcommit'
 alias gvim='UBUNTU_MENUPROXY= gvim'
+
+alias tlog='sudo less +F /var/log/tomcat7/catalina.out'
