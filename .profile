@@ -1,1 +1,1 @@
-if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+if [ -f ~/.bashrc ] && [ `uname` != "Linux" ]; then . ~/.bashrc; fi
