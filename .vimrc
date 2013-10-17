@@ -300,3 +300,6 @@ nnoremap tn :call NumberToggle()<CR>
 " got to next gitgutter hunk
 nmap <silent> ]h :GitGutterNextHunk<CR>
 nmap <silent> [h :GitGutterPrevHunk<CR>]
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
