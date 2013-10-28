@@ -48,13 +48,26 @@ BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
 # prompt
-function parse_git_dirty {
+parse_git_dirty() {
   [[ $(git status --porcelain 2> /dev/null | wc -l) -ge 1 ]] && echo "⚡"
 }
-function parse_git_branch {
+parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1="\n\t ${FMAG}\u ${FWHT}at ${FYEL}\h ${FWHT}in ${FGRN}\w ${FBLE}\$(parse_git_branch) ${FYEL}\$(parse_git_dirty)\
+
+parse_git_tag () {
+  git describe --tags 2> /dev/null
+}
+
+parse_git_branch_or_tag() {
+  local OUT="$(parse_git_branch)"
+  if [ "$OUT" == "((no branch))" ]; then
+    OUT="($(parse_git_tag))";
+  fi
+  echo $OUT
+}
+
+PS1="\n\t ${FMAG}\u ${FWHT}at ${FYEL}\h ${FWHT}in ${FGRN}\w ${FBLE}\$(parse_git_branch_or_tag) ${FYEL}\$(parse_git_dirty)\
 ${FWHT}\n$ "
 
 function up(){
