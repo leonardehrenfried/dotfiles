@@ -30,5 +30,5 @@ alias gsr='git svn rebase'
 alias gvim='UBUNTU_MENUPROXY= gvim'
 
 alias tlog='sudo less +F /var/log/tomcat7/catalina.out'
-alias tdeploy='mvn package -DskipTests && sudo service tomcat7 restart'
+alias tdeploy='mvn package clean -DskipTests && sudo service tomcat7 restart'
 
