@@ -1,4 +1,4 @@
-" Author: Leonard Ehrenfried <http://lenni.info>
+" Author: Leonard Ehrenfried <http://leonard.io>
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -208,14 +208,18 @@ endif
 
 "OS X specific
 if has("gui_macvim")
- set guioptions-=r
- set guioptions-=L
- set guifont=Source\ Code\ Pro\ Bold:h12
- set background=dark
- let g:solarized_termtrans=1
- let g:solarized_termcolors=256
- let g:solarized_contrast="high"
- let g:solarized_visibility="low"
+  set guioptions-=r
+  set guioptions-=L
+  set guifont=Source\ Code\ Pro\ Bold:h12
+  set background=dark
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
+  let g:solarized_contrast="high"
+  let g:solarized_visibility="low"
+endif
+
+if has("gui_running") && has("unix")
+  set guifont=Monospace\ 9
 endif
 
 "GUI specific
