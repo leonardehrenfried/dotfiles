@@ -46,6 +46,7 @@ declare -a dotfiles=(
   .ssh/config
   .alias
   .Xmodmap
+  .zshrc
 )
 
 for i in "${dotfiles[@]}"
