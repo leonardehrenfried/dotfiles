@@ -2,17 +2,17 @@
 
 CONTEXT_PATH=/etc/tomcat7/Catalina/localhost
 CURRENT=$CONTEXT_PATH/*.xml
+NAME="enable-tomcat-context"
 
 if [[ -n $(ls $CURRENT) ]]; then
-  echo "there are files"
   for f in $CURRENT
   do
     echo $f
     base=`basename $f`
-    echo "Disabling $base"
+    echo "[$NAME] Disabling $base"
     mv $f $f.old
   done
 fi
 
-echo "Enabling $1/xml"
+echo "[$NAME] Enabling $1.xml"
 mv $CONTEXT_PATH/$1.xml.old $CONTEXT_PATH/$1.xml
