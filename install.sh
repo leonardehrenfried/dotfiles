@@ -68,7 +68,6 @@ echo "*** Checking out git submodules with vundle***"
 
 if [ ! -d .vim/bundle/vundle/ ];
 then
-  mkdir -p .vim/bundle/
   git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
 fi
 vim +BundleInstall! +qall
