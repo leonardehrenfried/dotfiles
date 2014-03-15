@@ -1,4 +1,4 @@
-export PATH=~/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:$PATH
+export PATH=~/bin:~/.cabal/bin/:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:$PATH
 
 GEM_PATH=`gem environment|grep "EXECUTABLE DIRECTORY"|cut -d":" -f2|sed 's/^[ \t]*//'`
 if [ -d $GEM_PATH ]
