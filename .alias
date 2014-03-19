@@ -10,6 +10,7 @@ fi
 if [ "$os" == "Darwin" ]
 then
   alias ll="$command"
+  alias gvim="mvim"
 fi
 alias grep='grep --color=auto'
 alias jsonpretty='python -mjson.tool'
