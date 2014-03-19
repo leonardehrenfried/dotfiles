@@ -5,6 +5,7 @@ if [ "$os" == "Linux" ]
 then
   alias ll="$command --color"
   alias ack="ack-grep"
+  alias gvim='UBUNTU_MENUPROXY= gvim'
 fi
 
 if [ "$os" == "Darwin" ]
@@ -28,7 +29,6 @@ alias returncode='echo $?'
 alias gca='git commit -am'
 alias gsc='git svn dcommit'
 alias gsr='git svn rebase'
-alias gvim='UBUNTU_MENUPROXY= gvim'
 
 alias tlog='sudo less +F /var/log/tomcat7/catalina.out'
 
