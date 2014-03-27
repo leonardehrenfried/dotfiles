@@ -26,7 +26,7 @@
 
 [core]
     pager = cat
-    editor = /usr/bin/vim
+    editor = vim
     filemode = false
     ignorecase = false
     excludesfile = ~/.cvsignore
