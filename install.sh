@@ -36,6 +36,7 @@ declare -a dotfiles=(
   .inputrc
   .profile
   .bashrc
+  .bash_profile
   .ackrc
   .gemrc
   .hgrc
