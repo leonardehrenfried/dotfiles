@@ -3,16 +3,18 @@ export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/
 GEM_PATH=`gem environment|grep "EXECUTABLE DIRECTORY"|cut -d":" -f2|sed 's/^[ \t]*//'`
 if [ -d $GEM_PATH ]
 then
-    export PATH="$PATH:$GEM_PATH"
+  export PATH="$PATH:$GEM_PATH"
 fi
 
 if [ -d /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin ]
 then
-    export PATH="$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin"
+  export PATH="$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin"
 fi
 
 export EDITOR=vi
 export MANPATH=/usr/local/share/man:$MANPATH
+
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 
 # ls colour output
 export LS_OPTIONS='--color=auto'
