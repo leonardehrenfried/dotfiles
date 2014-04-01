@@ -45,7 +45,6 @@ declare -a dotfiles=(
   .rspec
   .ssh/config
   .alias
-  .Xmodmap
   .zshrc
 )
 
@@ -61,7 +60,7 @@ ln -sf `pwd`/bin/ ~/bin
 
 echo "Symlinking .sbt/plugins"
 mkdir -p ~/.sbt
-ln -sf `pwd`/.sbt/plugins ~/.sbt/plugins
+ln -sf `pwd`/.sbt/0.13 ~/.sbt/
 
 echo ""
 echo "*** Checking out git submodules with vundle***"
