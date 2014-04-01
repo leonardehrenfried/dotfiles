@@ -4,7 +4,9 @@ set bell-style none
 
 # search commands with arrow keys
 # https://coderwall.com/p/oqtj8w
-"\e[A": history-search-backward
-"\e[B": history-search-forward
+$if Bash
+  "\e[A": history-search-backward
+  "\e[B": history-search-forward
+$endif
 set show-all-if-ambiguous on
 set completion-ignore-case on
