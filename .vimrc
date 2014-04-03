@@ -184,7 +184,7 @@ let javascript_enable_domhtmlcss=1
 autocmd FileType java setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=80
 
 " scala
-let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\)'
+let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\|io.relayr\)'
 let g:scala_sort_across_groups=1
 
 " xml
