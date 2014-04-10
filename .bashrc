@@ -15,6 +15,7 @@ export EDITOR=vi
 export MANPATH=/usr/local/share/man:$MANPATH
 
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
 
 # ls colour output
 export LS_OPTIONS='--color=auto'
@@ -81,11 +82,12 @@ function up(){
 # setting the current dir as the window title
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
-#create the symlinks for all dotfiles
+# source files if they exist
 declare -a files=(/usr/share/autojump/autojump.sh
                   /usr/local/etc/autojump.sh
                   /usr/local/etc/bash_completion.d/git-completion.bash
-                  /etc/bash_completion.d/git)
+                  /etc/bash_completion.d/git
+                  .aws-credentials)
 
 for i in "${files[@]}"
 do
@@ -94,13 +96,6 @@ do
     source $i
   fi
 done
-
-# host specific email address for git
-# see http://lenni.info/blog/?p=510
-if [ -f .host-specific.sh ]
-then
-  source .host-specific.sh
-fi
 
 #export these variables so that they will be sent over SSH
 export GIT_AUTHOR_NAME="Leonard Ehrenfried"
