@@ -16,6 +16,7 @@ export MANPATH=/usr/local/share/man:$MANPATH
 
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
+export EC2_AMITOOL_HOME="/usr/local/Cellar/ec2-ami-tools/1.5.2/libexec"
 
 # ls colour output
 export LS_OPTIONS='--color=auto'
