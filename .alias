@@ -24,6 +24,7 @@ alias mvim3='mvim +vsplit +vsplit -c ":set lines=999 columns=999" $@'
 alias rvim='mvim --remote $@'
 alias serve='python -m SimpleHTTPServer 8123'
 alias timestamp='date "+%Y%m%d%H%M%S"'
+alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias returncode='echo $?'
 
 alias gca='git commit -am'
