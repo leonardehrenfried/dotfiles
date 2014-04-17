@@ -4,6 +4,7 @@
 .vim/bundle
 bin/bin
 bin/go
+.aws/.aws
 /macvim
 .sbt/plugins/project
 .sbt/plugins/target
