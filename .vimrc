@@ -187,7 +187,7 @@ autocmd FileType java setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 co
 autocmd BufNewFile,BufRead *.tex set spell
 
 " scala
-let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\|io.relayr\)'
+let g:scala_first_party_namespaces='\(controllers\|views\|models\|util\|de.\|relayr\)'
 let g:scala_sort_across_groups=1
 
 " xml
