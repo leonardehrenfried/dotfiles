@@ -12,6 +12,7 @@ if [ "$os" == "Darwin" ]
 then
   alias ll="$command"
   alias gvim="mvim"
+  alias clear-dns="sudo killall -HUP mDNSResponder"
 fi
 alias grep='grep --color=auto'
 alias jsonpretty='python -mjson.tool'
