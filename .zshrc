@@ -26,6 +26,35 @@ GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}●%{$reset_color%}"
 GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}●%{$reset_color%}"
 GIT_PROMPT_STAGED="%{$fg_bold[green]%}●%{$reset_color%}"
 
+export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:$PATH
+
+GEM_PATH=`gem environment|grep "EXECUTABLE DIRECTORY"|cut -d":" -f2|sed 's/^[ \t]*//'`
+if [ -d $GEM_PATH ]
+then
+  export PATH="$PATH:$GEM_PATH"
+fi
+
+if [ -d /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin ]
+then
+  export PATH="$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin"
+fi
+
+export EDITOR=vi
+export MANPATH=/usr/local/share/man:$MANPATH
+
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
+export EC2_AMITOOL_HOME="/usr/local/Cellar/ec2-ami-tools/1.5.2/libexec"
+
+# ls colour output
+export LS_OPTIONS='--color=auto'
+export CLICOLOR='Yes'
+export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Show Git branch/tag, or name-rev if on detached head
 parse_git_branch() {
   (git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD) 2> /dev/null
@@ -77,4 +106,5 @@ git_prompt_string() {
 }
 
 # Set the right-hand prompt
+PROMPT="%* %{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}"
 RPS1='$(git_prompt_string)'
