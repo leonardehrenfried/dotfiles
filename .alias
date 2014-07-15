@@ -28,6 +28,9 @@ alias timestamp='date "+%Y%m%d%H%M%S"'
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias password="openssl rand -base64 12"
 alias returncode='echo $?'
+function fnd() {
+  find . -name *$1*
+}
 function swap() {
   mv $1 tmp && mv $2 $1 && mv tmp $2
 }
