@@ -104,4 +104,8 @@ export GIT_COMMITTER_NAME="Leonard Ehrenfried"
 
 export MAVEN_OPTS=-Xmx512m
 
+export ANDROID_HOME=/usr/local/Cellar/android-sdk/23.0.2/
+export ANDROID_SDK=/usr/local/Cellar/android-sdk/23.0.2/
+
+
 source ~/.alias
