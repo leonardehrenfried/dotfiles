@@ -41,4 +41,5 @@ alias gsr='git svn rebase'
 alias gitignore='vim .gitignore'
 
 alias tlog='sudo less +F /var/log/tomcat7/catalina.out'
+alias a-encrypt='ansible-vault encrypt --vault-password-file ~/.vault_pass.txt'
 
