@@ -44,7 +44,7 @@ alias tlog='sudo less +F /var/log/tomcat7/catalina.out'
 alias a-encrypt='ansible-vault encrypt --vault-password-file ~/.vault_pass.txt'
 alias a-decrypt='ansible-vault decrypt --vault-password-file ~/.vault_pass.txt'
 
-function r-ssh(){
+function rssh(){
   echo "Looking up public IP for EC2 instance named '$1'"
   IP=`aws ec2 describe-instances --filters "Name=tag:Name,Values=${1}"| jq .Reservations[0].Instances[0].NetworkInterfaces[0].Association.PublicIp -r`
   echo "IP for '$1' is $IP"
