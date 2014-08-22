@@ -52,3 +52,13 @@ function rssh(){
   ssh leonard@$IP
 }
 
+function check-port(){
+  nc -z $1 $2
+  if [ $? -eq 0 ]
+    then
+    echo "Port $1 is open"
+  else
+    echo "Port $1 is closed"
+  fi
+
+}
