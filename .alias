@@ -27,6 +27,7 @@ alias serve='python -m SimpleHTTPServer 8123'
 alias timestamp='date "+%Y%m%d%H%M%S"'
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias password="openssl rand -base64 12"
+alias ssl-expiry="openssl x509 -enddate -noout -in"
 alias returncode='echo $?'
 function fnd() {
   find . -name *$1*
