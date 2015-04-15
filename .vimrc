@@ -41,6 +41,7 @@ Bundle 'jnurmine/Zenburn'
 Bundle 'vim-scripts/Atom'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'mxw/vim-jsx'
 
 set nocompatible
 filetype indent plugin on

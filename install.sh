@@ -21,7 +21,7 @@ then
   fi
 
   ICNS_URL=https://raw.githubusercontent.com/zhm/macvimhax/master/MacVim.icns
-  curl -o /Applications/MacVim.app/Contents/Resources/MacVim.icns $ICNS_URL
+  curl -s -o /Applications/MacVim.app/Contents/Resources/MacVim.icns $ICNS_URL
 fi
 
 #create ssh dir if it doesn't exist
