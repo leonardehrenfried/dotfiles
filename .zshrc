@@ -13,98 +13,50 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 setopt prompt_subst
-autoload -U colors && colors # Enable colors in prompt
-
-# Modify the colors and symbols in these variables as desired.
-GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
-GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$reset_color%}"
-GIT_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
-GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"
-GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"
-GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}●%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}●%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg_bold[green]%}●%{$reset_color%}"
+autoload -U colors && colors
+autoload -Uz vcs_info
 
 export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:$PATH
 
-GEM_PATH=`gem environment|grep "EXECUTABLE DIRECTORY"|cut -d":" -f2|sed 's/^[ \t]*//'`
-if [ -d $GEM_PATH ]
-then
-  export PATH="$PATH:$GEM_PATH"
-fi
+source /usr/local/etc/autojump.zsh
 
-if [ -d /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin ]
-then
-  export PATH="$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin"
-fi
+zstyle ':vcs_info:*' stagedstr '%F{green} ●%f'
+zstyle ':vcs_info:*' unstagedstr '%F{yellow} ●%f'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{red}:%f%F{yellow}%r%f'
+zstyle ':vcs_info:*' enable git
 
-export EDITOR=vi
-export MANPATH=/usr/local/share/man:$MANPATH
-
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
-export EC2_AMITOOL_HOME="/usr/local/Cellar/ec2-ami-tools/1.5.2/libexec"
-
-# ls colour output
-export LS_OPTIONS='--color=auto'
-export CLICOLOR='Yes'
-export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-# Show Git branch/tag, or name-rev if on detached head
-parse_git_branch() {
-  (git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD) 2> /dev/null
+precmd () {
+    if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+        zstyle ':vcs_info:*' formats '%F{cyan}[%b%c%u%f%F{cyan}]%f'
+    } else {
+        zstyle ':vcs_info:*' formats '%F{cyan}[%b%c%u%f%F{red} ●%f%F{cyan}]%f'
+    }
+    vcs_info
 }
 
-# Show different symbols as appropriate for various Git repository states
-parse_git_state() {
-
-  # Compose this value via multiple conditional appends.
-  local GIT_STATE=""
-
-  local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
-  if [ "$NUM_AHEAD" -gt 0 ]; then
-    GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
-  fi
-
-  local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
-  if [ "$NUM_BEHIND" -gt 0 ]; then
-    GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
-  fi
-
-  local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
-  if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_MERGING
-  fi
-
-  if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
-  fi
-
-  if ! git diff --quiet 2> /dev/null; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_MODIFIED
-  fi
-
-  if ! git diff --cached --quiet 2> /dev/null; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
-  fi
-
-  if [[ -n $GIT_STATE ]]; then
-    echo "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
-  fi
-
+### Detects the VCS and shows the appropriate sign
+function prompt_char {
+    git branch >/dev/null 2>/dev/null && echo '±' && return
+#    hg root >/dev/null 2>/dev/null && echo '☿' && return
+#    svn info >/dev/null 2>/dev/null && echo '⚡' && return
+    echo '%#'
 }
 
-# If inside a Git repository, print its branch and state
-git_prompt_string() {
-  local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
-}
+### Needed for a pretty prompt
+setopt prompt_subst # Enables additional prompt extentions
 
-# Set the right-hand prompt
-PROMPT="%* %{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}"
-RPS1='$(git_prompt_string)'
+PROMPT='
+%D{%H:%M:%S}%f %(!.%B%U%F{e}%n%f%u%b.%F{magenta}%n%f) at %F{yellow}%m%f in %F{green}%~%f
+%{$reset_color%}$ '
+### My default prompt's right side
+RPROMPT='${vcs_info_msg_0_} %(!.%F{red}%f.)'
+
+### My prompt for loops
+PROMPT2='{%_}  '
+
+### My prompt for selections
+PROMPT3='{ … }  '
+
+### So far I don't use "setopt xtrace", so I don't need this prompt
+#PROMPT4=''
