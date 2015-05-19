@@ -16,8 +16,15 @@ setopt append_history share_history histignorealldups
 setopt appendhistory autocd extendedglob nomatch notify
 
 autoload -U colors && colors
-autoload -Uz vcs_info
 autoload compinit && compinit
+
+# ls colors and menu completion
+export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
+zmodload -a colors
+zmodload -a autocomplete
+zmodload -a complist
+zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
+zstyle ':completion:*' menu select
 
 # arrow up will search through history
 autoload -Uz up-line-or-beginning-search
@@ -35,6 +42,8 @@ export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/
 
 source ~/.alias
 
+# VCS prompt
+autoload -Uz vcs_info
 zstyle ':vcs_info:*' stagedstr '%F{green}●%f'
 zstyle ':vcs_info:*' unstagedstr '%F{yellow}●%f'
 zstyle ':vcs_info:*' check-for-changes true
