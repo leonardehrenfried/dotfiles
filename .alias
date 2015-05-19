@@ -10,7 +10,7 @@ fi
 
 if [[ "$os" == "Darwin" ]]
 then
-  alias ll="$command"
+  alias ll="${command}G"
   alias gvim="mvim"
   alias clear-dns="sudo killall -HUP mDNSResponder"
 fi
