@@ -19,8 +19,9 @@ autoload compinit && compinit
 
 export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:$PATH
 
-plugins=(git gitignore autojump)
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+source .alias
 
 zstyle ':vcs_info:*' stagedstr '%F{green}●%f'
 zstyle ':vcs_info:*' unstagedstr '%F{yellow}●%f'
