@@ -2,26 +2,38 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd extendedglob nomatch notify
+
 unsetopt beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/data/home/lehrenfried/.zshrc'
 
-autoload -Uz compinit
-compinit
 # End of lines added by compinstall
-setopt prompt_subst correct
+setopt prompt_subst
+setopt correct
+setopt append_history share_history histignorealldups
+setopt appendhistory autocd extendedglob nomatch notify
+
 autoload -U colors && colors
 autoload -Uz vcs_info
 autoload compinit && compinit
+
+# arrow up will search through history
+autoload -Uz up-line-or-beginning-search
+autoload -Uz down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '\eOA' up-line-or-beginning-search
+bindkey '\e[A' up-line-or-beginning-search
+bindkey '\eOB' down-line-or-beginning-search
+bindkey '\e[B' down-line-or-beginning-search
 
 export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:$PATH
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-source .alias
+source ~/.alias
 
 zstyle ':vcs_info:*' stagedstr '%F{green}●%f'
 zstyle ':vcs_info:*' unstagedstr '%F{yellow}●%f'
