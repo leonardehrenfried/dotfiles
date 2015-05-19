@@ -18,7 +18,8 @@ autoload -Uz vcs_info
 
 export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:$PATH
 
-source /usr/local/etc/autojump.zsh
+plugins=(git gitignore autojump)
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 zstyle ':vcs_info:*' stagedstr '%F{green} ●%f'
 zstyle ':vcs_info:*' unstagedstr '%F{yellow} ●%f'
@@ -27,27 +28,19 @@ zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{red}:%f%F{yellow}%r%f'
 zstyle ':vcs_info:*' enable git
 
 precmd () {
-    if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
-        zstyle ':vcs_info:*' formats '%F{cyan}[%b%c%u%f%F{cyan}]%f'
-    } else {
-        zstyle ':vcs_info:*' formats '%F{cyan}[%b%c%u%f%F{red} ●%f%F{cyan}]%f'
-    }
-    vcs_info
-}
-
-### Detects the VCS and shows the appropriate sign
-function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '±' && return
-#    hg root >/dev/null 2>/dev/null && echo '☿' && return
-#    svn info >/dev/null 2>/dev/null && echo '⚡' && return
-    echo '%#'
+  if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
+    zstyle ':vcs_info:*' formats '%F{blue}(%b%c%u%f%F{blue})%f'
+  } else {
+    zstyle ':vcs_info:*' formats '%F{blue}(%b%c%u%f%F{red}) ●%f%F{blue}]%f'
+  }
+  vcs_info
 }
 
 ### Needed for a pretty prompt
 setopt prompt_subst # Enables additional prompt extentions
 
 PROMPT='
-%D{%H:%M:%S}%f %(!.%B%U%F{e}%n%f%u%b.%F{magenta}%n%f) at %F{yellow}%m%f in %F{green}%~%f
+%D{%H:%M:%S}%f %(!.%B%U%F{e}%n%f%u%b.%F{magenta}%n%f) at %F{yellow}%m%f in %F{green}%~%f ${vcs_info_msg_0_} %(!.%F{red}%f.)
 %{$reset_color%}$ '
 ### My default prompt's right side
 RPROMPT='${vcs_info_msg_0_} %(!.%F{red}%f.)'
