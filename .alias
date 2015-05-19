@@ -1,14 +1,14 @@
 os=`uname`
 
 command="ls -lah"
-if [ "$os" == "Linux" ]
+if [[ "$os" == "Linux" ]]
 then
   alias ll="$command --color"
   alias ack="ack-grep"
   alias gvim='UBUNTU_MENUPROXY= gvim'
 fi
 
-if [ "$os" == "Darwin" ]
+if [[ "$os" == "Darwin" ]]
 then
   alias ll="$command"
   alias gvim="mvim"
