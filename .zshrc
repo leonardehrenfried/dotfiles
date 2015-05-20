@@ -57,6 +57,7 @@ precmd () {
     zstyle ':vcs_info:*' formats '%F{blue}(%b%c%u%f%F{red}) ●%f%F{blue}]%f'
   }
   vcs_info
+  echo -ne "\033]0;${PWD##*/}\007"
 }
 
 ### Needed for a pretty prompt
