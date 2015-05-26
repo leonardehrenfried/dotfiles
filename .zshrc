@@ -40,8 +40,6 @@ export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-source ~/.alias
-
 # VCS prompt
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' stagedstr '%F{green}●%f'
@@ -77,3 +75,10 @@ PROMPT3='{ … }  '
 
 ### So far I don't use "setopt xtrace", so I don't need this prompt
 #PROMPT4=''
+#
+
+lw=(~/.alias ~/.secrets)
+
+for i in $lw; do
+  source $i
+done

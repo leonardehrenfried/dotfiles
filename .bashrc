@@ -89,7 +89,7 @@ declare -a files=(/usr/share/autojump/autojump.sh
                   /usr/local/etc/autojump.sh
                   /usr/local/etc/bash_completion.d/git-completion.bash
                   /etc/bash_completion.d/git
-                  .aws-credentials)
+                  .secrets)
 
 for i in "${files[@]}"
 do
