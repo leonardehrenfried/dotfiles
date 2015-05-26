@@ -11,7 +11,7 @@ fi
 cd macvim
 export CC=clang
 make distclean
-./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope --enable-python3interp
+./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope --enable-python3interp --enable-luainterp
 make
 open src/MacVim/build/Release/
 
