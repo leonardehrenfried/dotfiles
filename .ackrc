@@ -6,5 +6,5 @@
 --type-add=java=.drl,.jelly,.project,.jobConfig
 --type-add=ruby=.podspec,.pp
 --type-add=css=.less,.scss
---type-add=js=.coffee
+--type-add=js=.coffee,.jsx
 --type-set=vim=.vim
