@@ -13,7 +13,7 @@ zstyle :compinstall filename '/data/home/lehrenfried/.zshrc'
 setopt prompt_subst
 setopt correct
 setopt append_history share_history histignorealldups
-setopt appendhistory autocd extendedglob nomatch notify
+setopt appendhistory autocd nomatch notify
 
 autoload -U colors && colors
 autoload compinit && compinit
@@ -52,7 +52,7 @@ precmd () {
   if [[ -z $(git ls-files --other --exclude-standard 2> /dev/null) ]] {
     zstyle ':vcs_info:*' formats '%F{blue}(%b) %c%u%f%F{blue}%f'
   } else {
-    zstyle ':vcs_info:*' formats '%F{blue}(%b%c%u%f%F{red}) ●%f%F{blue}]%f'
+    zstyle ':vcs_info:*' formats '%F{blue}(%b%c%u%f%F) {cyan}●%f%F%f'
   }
   vcs_info
   echo -ne "\033]0;${PWD##*/}\007"
