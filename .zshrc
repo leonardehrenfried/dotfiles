@@ -77,7 +77,7 @@ PROMPT3='{ … }  '
 #PROMPT4=''
 #
 
-lw=(~/.alias ~/.secrets)
+lw=(~/.env ~/.alias ~/.secrets)
 
 for i in $lw; do
   source $i

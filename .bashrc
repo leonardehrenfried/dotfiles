@@ -1,32 +1,10 @@
-export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:$PATH
-
-GEM_PATH=`gem environment|grep "EXECUTABLE DIRECTORY"|cut -d":" -f2|sed 's/^[ \t]*//'`
-if [ -d $GEM_PATH ]
-then
-  export PATH="$PATH:$GEM_PATH"
-fi
-
-if [ -d /opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin ]
-then
-  export PATH="$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin"
-fi
-
-export EDITOR=vi
-export MANPATH=/usr/local/share/man:$MANPATH
-
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -Xmx1500M"
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.13.0/libexec"
-export EC2_AMITOOL_HOME="/usr/local/Cellar/ec2-ami-tools/1.5.2/libexec"
-export ANSIBLE_USER=leonard
+source .env
+source .alias
 
 # ls colour output
 export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS='Bxcxfxfxcxdxdxhbadbxbx'
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 
 # color definitions
 force_color_prompt=yes
@@ -109,4 +87,3 @@ export ANDROID_HOME=/usr/local/Cellar/android-sdk/23.0.2/
 export ANDROID_SDK=/usr/local/Cellar/android-sdk/23.0.2/
 
 
-source ~/.alias
