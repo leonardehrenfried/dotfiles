@@ -50,6 +50,7 @@ declare -a dotfiles=(
   .rspec
   .ssh/config
   .alias
+  .env
   .zshrc
 )
 
