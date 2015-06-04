@@ -68,3 +68,5 @@ function check-port(){
 ES_BASE='http://localhost:9200'
 alias es-health='http ${ES_BASE}/_cluster/health'
 alias es-indices='http ${ES_BASE}/_cluster/health'
+
+alias sbt='sbt -mem 1500'
