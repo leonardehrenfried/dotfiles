@@ -8,3 +8,4 @@
 --type-add=css=.less,.scss
 --type-add=js=.coffee,.jsx
 --type-set=vim=.vim
+--type-set=conf=.conf
