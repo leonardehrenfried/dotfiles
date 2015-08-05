@@ -9,3 +9,4 @@
 --type-add=js=.coffee,.jsx
 --type-set=vim=.vim
 --type-set=conf=.conf
+--type-set=cucumber=.feature
