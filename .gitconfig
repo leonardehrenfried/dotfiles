@@ -33,14 +33,14 @@
 
 [alias]
     stat = status -sb
-    author-stats = shortlog -s -n
+    author-stats = shortlog -s -n --no-merges
     todo = grep --heading --break --ignore-case -e ' FIX: *' -e ' TODO: *'
     wdiff = diff --word-diff
     preview = commit --dry-run -a --short
     dstat   = diff --stat
     cdiff   = diff --cached
     lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
-    count = rev-list --count HEAD
+    count = rev-list --count HEAD --no-merges
 
 [branch]
     autosetuprebase = always
