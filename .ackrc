@@ -3,6 +3,7 @@
 --ignore-dir=node_modules
 --ignore-dir=.idea
 --ignore-dir=_site
+--ignore-file=is:highlight.pack.js
 --type-add=java=.drl,.jelly,.project,.jobConfig
 --type-add=ruby=.podspec,.pp
 --type-add=css=.less,.scss
