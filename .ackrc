@@ -4,6 +4,7 @@
 --ignore-dir=.idea
 --ignore-dir=_site
 --ignore-file=is:highlight.pack.js
+--ignore-file=is:mnq.js
 --type-add=java=.drl,.jelly,.project,.jobConfig
 --type-add=ruby=.podspec,.pp
 --type-add=css=.less,.scss
