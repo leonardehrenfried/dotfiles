@@ -52,6 +52,7 @@ declare -a dotfiles=(
   .alias
   .env
   .zshrc
+  .psqlrc
 )
 
 for i in "${dotfiles[@]}"
