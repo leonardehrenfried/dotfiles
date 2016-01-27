@@ -9,3 +9,4 @@ bin/go
 .sbt/plugins/project
 .sbt/plugins/target
 .sbt/plugins/plugins
+.sbt/0.13/dependency
