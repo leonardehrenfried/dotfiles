@@ -58,7 +58,7 @@ set hidden
 set wildmenu "cli autocomplete
 " Excludes
 set wildignore+=*.o,*.obj,*.pyc
-set wildignore+=tmp,**/target/*,precompiled,test-result,dist
+set wildignore+=tmp,**/target/*,precompiled,test-result
 set wildignore+=*.jar,node_modules
 set wildignore+=_site
 set wildignore+=.git,.hg,CVS
