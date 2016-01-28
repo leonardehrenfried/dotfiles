@@ -1,5 +1,6 @@
 *.swp
 .vim/.vim
+.vim/nvim
 .vim/.netrwhist
 .vim/bundle
 bin/bin
