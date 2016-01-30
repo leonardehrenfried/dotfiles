@@ -69,6 +69,10 @@ echo "Symlinking .sbt/plugins"
 mkdir -p ~/.sbt
 ln -sf `pwd`/.sbt/0.13 ~/.sbt/
 
+echo "Symlinking .config/nvim"
+mkdir -p ~/.config
+ln -sf `pwd`/.vim ~/.config/nvim
+
 echo ""
 echo "*** Checking out git submodules with vundle***"
 

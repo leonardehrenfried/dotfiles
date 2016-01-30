@@ -1,5 +1,6 @@
 *.swp
 .vim/.vim
+.vim/nvim
 .vim/.netrwhist
 .vim/bundle
 bin/bin
@@ -9,3 +10,4 @@ bin/go
 .sbt/plugins/project
 .sbt/plugins/target
 .sbt/plugins/plugins
+.sbt/0.13/dependency
