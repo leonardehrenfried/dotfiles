@@ -43,6 +43,7 @@ Bundle 'vim-scripts/Atom'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mxw/vim-jsx'
+Bundle 'lambdatoast/elm.vim'
 Plugin 'rust-lang/rust.vim'
 
 set nocompatible
