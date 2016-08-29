@@ -47,7 +47,6 @@ declare -a dotfiles=(
   .cvsignore
   .npmrc
   .ctags
-  .rspec
   .ssh/config
   .alias
   .env
