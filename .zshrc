@@ -82,3 +82,5 @@ lw=(~/.env ~/.alias ~/.secrets)
 for i in $lw; do
   source $i
 done
+
+eval "$(docker-machine env virtualbox)"

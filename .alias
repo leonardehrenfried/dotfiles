@@ -38,8 +38,7 @@ function swap() {
 }
 
 alias gca='git commit -am'
-alias gsc='git svn dcommit'
-alias gsr='git svn rebase'
+alias gcm='git commit -m'
 alias gitignore='vim .gitignore'
 
 alias tlog='sudo less +F /var/log/tomcat7/catalina.out'
