@@ -11,3 +11,4 @@ bin/go
 .sbt/plugins/target
 .sbt/plugins/plugins
 .sbt/0.13/dependency
+.sbt/0.13/sonatype.sbt
