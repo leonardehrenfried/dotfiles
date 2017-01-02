@@ -9,7 +9,6 @@ Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
 Bundle 'Raimondi/delimitMate'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'ap/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
@@ -44,7 +43,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mxw/vim-jsx'
 Bundle 'lambdatoast/elm.vim'
-Plugin 'rust-lang/rust.vim'
+Bundle 'rust-lang/rust.vim'
+Bundle 'hashivim/vim-terraform'
+Bundle 'vim-scripts/nginx.vim'
 
 set nocompatible
 filetype indent plugin on
