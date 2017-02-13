@@ -35,7 +35,6 @@ fi
 declare -a dotfiles=(
   .vimrc
   .vim
-  .aws
   .gitconfig
   .inputrc
   .profile
