@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import argparse
+import configparser
+import os
+import sys
+
+CREDENTIALS_PATH = "~/.aws/credentials"
+
+def main():
+    parser = argparse.ArgumentParser(prog="aws-env",
+        description="Extract AWS credentials for a given profile as environment variables.")
+    parser.add_argument('-n', '--no-export', action="store_true",
+        help="Do not use export on the variables.")
+    parser.add_argument("profile", help="The profile in ~/.aws/credentials to extract credentials for.")
+
+    args = parser.parse_args()
+
+    # load the ini file into a dictionary
+    config = configparser.ConfigParser()
+
+    if not os.path.isfile(os.path.expanduser(CREDENTIALS_PATH)):
+        fail("Unable to load credentials file from {}".format(os.path.expanduser(CREDENTIALS_PATH)))
+
+    config.read(os.path.expanduser(CREDENTIALS_PATH))
+
+    # sanity checking
+    if not args.profile in config.sections():
+        fail("Profile \"{}\" does not exist.".format(args.profile))
+
+    if not 'aws_access_key_id' in config[args.profile].keys():
+        fail("AWS Access Key ID not found in profile \"{}\"".format(args.profile))
+
+    if not 'aws_secret_access_key' in config[args.profile].keys():
+        fail ("AWS Secret Access Key not found in profile \"{}\"".format(args.profile))
+
+    if args.no_export:
+        export=""
+    else:
+        export="export "
+
+    sys.stdout.write("{}AWS_ACCESS_KEY_ID={}\n".format(export, config[args.profile]['aws_access_key_id']))
+    sys.stdout.write("{}AWS_SECRET_ACCESS_KEY={}\n".format(export, config[args.profile]['aws_secret_access_key']))
+    sys.stdout.flush()
+
+def fail(message):
+    sys.stderr.write(message + "\n")
+    sys.stderr.flush()
+    sys.exit(1)
+
+if __name__ == "__main__":
+    main()

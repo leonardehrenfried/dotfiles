@@ -12,3 +12,4 @@ bin/go
 .sbt/plugins/plugins
 .sbt/0.13/dependency
 .sbt/0.13/sonatype.sbt
+bin/jenkins-generate
