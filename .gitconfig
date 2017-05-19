@@ -60,3 +60,5 @@
 
 [advice]
     pushNonFastForward = false
+[commit]
+	gpgsign = true
