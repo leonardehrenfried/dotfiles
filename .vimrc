@@ -6,7 +6,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-Bundle 'wincent/Command-T'
+Bundle 'cloudhead/neovim-fuzzy'
 Bundle 'Raimondi/delimitMate'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ap/vim-css-color'
@@ -292,7 +292,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 inoremap <expr><C-space> neocomplete#start_manual_complete()
 
 "Command-t buffer
-nnoremap tt :CommandT<CR>
+nnoremap tt :FuzzyOpen<CR>
 nnoremap tf :CommandTFlush<CR>
 nnoremap tb :CommandTBuffer<CR>
 
