@@ -209,6 +209,8 @@ iab lenght length
 " CONDITIONALS "
 """"""""""""""""
 
+colorscheme zenburn
+
 "Windows specific
 if has('win32')
  set guifont=Consolas
