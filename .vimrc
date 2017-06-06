@@ -319,3 +319,5 @@ nmap <silent> [h :GitGutterPrevHunk<CR>]
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
+com! FormatJSON %!python -m json.tool
