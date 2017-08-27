@@ -66,6 +66,7 @@ ln -sf `pwd`/bin/ ~/bin
 echo "Symlinking .sbt/plugins"
 mkdir -p ~/.sbt
 ln -sf `pwd`/.sbt/0.13 ~/.sbt/
+ln -sf `pwd`/.sbt/1.0 ~/.sbt/
 
 echo "Symlinking .config/nvim"
 mkdir -p ~/.config
