@@ -81,12 +81,4 @@ then
 fi
 vim +BundleInstall! +qall
 
-echo ""
-echo "*** Compiling command-t ***"
-cd .vim/bundle/Command-T/ruby/command-t
-set +e
-make clean
-set -e
-ruby extconf.rb
-make
 
