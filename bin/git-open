@@ -59,6 +59,16 @@ if grep -q gist.github <<<$giturl; then
   giturl=${giturl/git\@gist.github\.com\:/https://gist.github.com/}
   providerUrlDifference=tree
 
+# Github Enterprise
+elif grep -q github.bus <<<$giturl; then
+  giturl=${giturl/git\@github\.bus\.zalan\.do\:/https://github.bus.zalan.do/}
+
+  # handle SSH protocol (links like ssh://git@github.com/user/repo)
+  giturl=${giturl/#ssh\:\/\/git\@github\.bus.\zalan.\do\//https://github.bus.zalan.do/}
+
+  providerUrlDifference=tree
+
+
 # GitHub
 elif grep -q github <<<$giturl; then
   giturl=${giturl/git\@github\.com\:/https://github.com/}
