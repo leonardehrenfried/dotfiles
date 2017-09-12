@@ -39,6 +39,7 @@ bindkey '\e[B' down-line-or-beginning-search
 export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:~/.local/bin:~/.cargo/bin:$PATH
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+. /usr/share/autojump/autojump.zsh
 
 # VCS prompt
 autoload -Uz vcs_info
