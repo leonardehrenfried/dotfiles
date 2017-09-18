@@ -81,7 +81,7 @@ PROMPT3='{ … }  '
 lw=(~/.env ~/.alias ~/.secrets)
 
 for i in $lw; do
-  source $i
+  source $i &> /dev/null
 done
 
-eval "$(docker-machine env virtualbox)"
+eval "$(docker-machine env virtualbox)" &> /dev/null
