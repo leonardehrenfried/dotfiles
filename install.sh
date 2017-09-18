@@ -75,9 +75,9 @@ ln -sf `pwd`/.vim ~/.config/nvim
 echo ""
 echo "*** Checking out git submodules with vundle***"
 
-if [ ! -d .vim/bundle/vundle/ ];
+if [ ! -d .vim/bundle/Vundle.vim/ ];
 then
-  git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 vim +BundleInstall! +qall
 
