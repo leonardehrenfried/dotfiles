@@ -14,6 +14,7 @@ bin/go
 .sbt/0.13/sonatype.sbt
 .sbt/0.13/sonatypezalando.sbt
 .sbt/0.13/plugins/idea.sbt
+.sbt/1.0/plugins/idea.sbt
 .sbt/1.0/sonatype.sbt
 .sbt/1.0/zinc/
 .sbt/1.0/sonatypezalando.sbt
