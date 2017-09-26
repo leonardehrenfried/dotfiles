@@ -3,6 +3,7 @@
 .vim/nvim
 .vim/.netrwhist
 .vim/bundle
+.vim/init.vim
 bin/bin
 bin/go
 .aws/.aws

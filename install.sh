@@ -70,7 +70,8 @@ ln -sf `pwd`/.sbt/1.0 ~/.sbt/
 
 echo "Symlinking .config/nvim"
 mkdir -p ~/.config
-ln -sf `pwd`/.vim ~/.config/nvim
+ln -sf `pwd`/.vim   ~/.config/nvim
+ln -sf `pwd`/.vimrc ~/.config/nvim/init.vim
 
 echo ""
 echo "*** Checking out git submodules with vundle***"

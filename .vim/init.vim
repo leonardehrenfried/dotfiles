@@ -1,1 +1,1 @@
-/Users/lenni/.vimrc
+/home/lehrenfried/dev/dotfiles/.vimrc
