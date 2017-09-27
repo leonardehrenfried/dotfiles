@@ -51,6 +51,7 @@ declare -a dotfiles=(
   .env
   .zshrc
   .psqlrc
+  .tmux.conf
 )
 
 for i in "${dotfiles[@]}"
