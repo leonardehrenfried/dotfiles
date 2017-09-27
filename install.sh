@@ -73,6 +73,10 @@ mkdir -p ~/.config
 ln -sf `pwd`/.vim   ~/.config/nvim
 ln -sf `pwd`/.vimrc ~/.config/nvim/init.vim
 
+echo "Symlinking gpg-agent.conf"
+mkdir -p ~/.gnupg/
+ln -sf `pwd`/gpg-agent.conf   ~/.gnupg/gpg-agent.conf
+
 echo ""
 echo "*** Checking out git submodules with vundle***"
 
