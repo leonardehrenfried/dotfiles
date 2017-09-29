@@ -1,1 +1,0 @@
-/home/lehrenfried/dev/dotfiles/.vimrc
