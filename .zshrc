@@ -38,8 +38,8 @@ bindkey '\e[B' down-line-or-beginning-search
 
 export PATH=~/bin:~/.cabal/bin:/usr/local/bin:/Users/lenni/bin:/usr/local/share/npm/bin:/sbin:~/.local/bin:~/.cargo/bin:$PATH
 
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-. /usr/share/autojump/autojump.zsh
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh > /dev/null
+. /usr/share/autojump/autojump.zsh > /dev/null
 
 # VCS prompt
 autoload -Uz vcs_info
@@ -84,4 +84,4 @@ for i in $lw; do
   source $i &> /dev/null
 done
 
-eval "$(docker-machine env virtualbox)" &> /dev/null
+eval "$(docker-machine env default)" &> /dev/null
