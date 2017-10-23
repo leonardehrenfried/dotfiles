@@ -78,6 +78,8 @@ PROMPT3='{ … }  '
 #PROMPT4=''
 #
 
+export TERM="xterm-256color"
+
 lw=(~/.env ~/.alias ~/.secrets)
 
 for i in $lw; do
