@@ -28,13 +28,18 @@ alias timestamp='date "+%Y%m%d%H%M%S"'
 alias isotime='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias password="openssl rand -base64 12"
-alias ssl-expiry="openssl x509 -enddate -noout -in"
 alias returncode='echo $?'
+
 function fnd() {
   find . -name *$1*
 }
+
 function swap() {
   mv $1 tmp && mv $2 $1 && mv tmp $2
+}
+
+function ssl-expiry() {
+  echo | openssl s_client -servername $1 -connect $1:443 2>/dev/null | openssl x509 -noout -dates
 }
 
 alias gca='git commit -am'
