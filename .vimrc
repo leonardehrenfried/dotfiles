@@ -56,6 +56,8 @@ let g:neocomplete_enable_at_startup = 1
 "enable only manual complete
 let g:neocomplete_disable_auto_complete = 1
 
+set guicursor=
+
 set hidden
 set wildmenu "cli autocomplete
 " Excludes
