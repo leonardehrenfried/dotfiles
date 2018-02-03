@@ -62,5 +62,3 @@
     pushNonFastForward = false
 [commit]
 	gpgsign = true
-[gpg]
-	program = gpg2

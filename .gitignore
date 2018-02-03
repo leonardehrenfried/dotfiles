@@ -20,4 +20,5 @@ bin/go
 .sbt/1.0/zinc/
 .sbt/1.0/sonatypezalando.sbt
 .sbt/1.0/templates/
+.sbt/1.0/server/
 bin/jenkins-generate
