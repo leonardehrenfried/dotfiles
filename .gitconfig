@@ -1,6 +1,6 @@
 [user]
     name = Leonard Ehrenfried
-    email = leonard.ehrenfried@gmail.com
+    email = mail@leonard.io
 
 [diff]
     renames=true
@@ -61,4 +61,4 @@
 [advice]
     pushNonFastForward = false
 [commit]
-	gpgsign = true
+    gpgsign = true
