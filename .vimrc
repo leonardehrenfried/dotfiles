@@ -32,7 +32,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'mxw/vim-jsx'
 Plugin 'jnurmine/Zenburn'
 Plugin 'chriskempson/base16-vim'
-Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 

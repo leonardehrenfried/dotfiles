@@ -22,3 +22,4 @@ bin/go
 .sbt/1.0/templates/
 .sbt/1.0/server/
 bin/jenkins-generate
+.sbt/0.13/java9-rt-ext-oracle_corporation_9_0_4/
