@@ -23,7 +23,7 @@ alias myip='ifconfig | grep "inet " | cut -d" " -f 2'
 alias mvim2='mvim +vsplit -c ":set lines=999 columns=999" $@'
 alias mvim3='mvim +vsplit +vsplit -c ":set lines=999 columns=999" $@'
 alias rvim='mvim --remote $@'
-alias serve='open http://localhost:8123 && python -m SimpleHTTPServer 8123'
+alias serve='open http://localhost:8123 && python3 -m http.server 8123'
 alias timestamp='date "+%Y%m%d%H%M%S"'
 alias isotime='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
