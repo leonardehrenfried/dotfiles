@@ -6,6 +6,7 @@
 .vim/init.vim
 bin/bin
 bin/go
+bin/awsudo
 .aws/.aws
 /macvim
 .sbt/plugins/project
@@ -19,6 +20,7 @@ bin/go
 .sbt/1.0/sonatype.sbt
 .sbt/1.0/zinc/
 .sbt/1.0/sonatypezalando.sbt
+.sbt/1.0/mobimeo.sbt
 .sbt/1.0/templates/
 .sbt/1.0/server/
 bin/jenkins-generate

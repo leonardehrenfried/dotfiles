@@ -42,6 +42,8 @@
     count = rev-list --count HEAD --no-merges
     root = !pwd
     clean-branches = remote prune origin
+    show-merged-branches = !"git branch --merged | egrep -v '(^\\*|master|dev|develop|production|staging)'"
+    delete-merged-branches = !"git show-merged-branches | xargs git branch -d"
 
 [branch]
     autosetuprebase = always
