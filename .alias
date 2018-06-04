@@ -76,3 +76,18 @@ alias es-indices='http ${ES_BASE}/_cat/indices'
 
 alias vim='nvim'
 alias reload-tmux-config='tmux source-file ~/.tmux.conf'
+
+# kubectl
+
+alias kubectl-staging='kubectl --context k8s.staging.unterwegs.io'
+alias kubectl-dev='kubectl --context k8s.dev.unterwegs.io'
+function kubectl-dev-pods() {
+  kubectl-dev get pods | grep $1 | cut -d" " -f1
+}
+
+function kubectl-dev-logs() {
+  kubectl-dev logs `kubectl-dev get pods | grep $1 | cut -d" " -f1`
+}
+
+
+
