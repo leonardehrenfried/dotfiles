@@ -79,6 +79,7 @@ alias reload-tmux-config='tmux source-file ~/.tmux.conf'
 
 # kubectl
 
+alias kubectl-production='kubectl --context k8s.production.unterwegs.io'
 alias kubectl-staging='kubectl --context k8s.staging.unterwegs.io'
 alias kubectl-dev='kubectl --context k8s.dev.unterwegs.io'
 function kubectl-dev-pods() {
@@ -89,5 +90,7 @@ function kubectl-dev-logs() {
   kubectl-dev logs `kubectl-dev get pods | grep $1 | cut -d" " -f1`
 }
 
-
+function kubectl-staging-logs() {
+  kubectl-staging logs `kubectl-staging get pods | grep $1 | cut -d" " -f1`
+}
 

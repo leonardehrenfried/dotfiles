@@ -25,7 +25,7 @@
     untracked = cyan
 
 [core]
-    editor = vim
+    editor = nvim
     filemode = false
     ignorecase = false
     excludesfile = ~/.cvsignore
@@ -41,7 +41,7 @@
     lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n40
     count = rev-list --count HEAD --no-merges
     root = !pwd
-    clean-branches = remote prune origin
+    clean-branches = !"git remote prune origin && git delete-merged-branches"
     show-merged-branches = !"git branch --merged | egrep -v '(^\\*|master|dev|develop|production|staging)'"
     delete-merged-branches = !"git show-merged-branches | xargs git branch -d"
 
