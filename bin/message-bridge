@@ -1,0 +1,9 @@
+#! /bin/bash
+
+outputfile=/tmp/message-bridge.jar
+
+if ! [ -f $outputfile ]; then
+  curl https://venture-unterwegs.pages.bcgdv.io/message-bridge/message-bridge.jar -o $outputfile
+fi
+
+java -jar $outputfile
