@@ -8,7 +8,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'cloudhead/neovim-fuzzy'
 Plugin 'Raimondi/delimitMate'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'ap/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'groenewege/vim-less'
@@ -29,9 +28,8 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'vim-scripts/Atom'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'mxw/vim-jsx'
 Plugin 'jnurmine/Zenburn'
-Plugin 'chriskempson/base16-vim'
+Plugin 'pearofducks/ansible-vim'
 
 call vundle#end()
 
