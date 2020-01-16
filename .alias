@@ -4,8 +4,7 @@ command="ls -lah"
 if [[ "$os" == "Linux" ]]
 then
   alias ll="$command --color"
-  alias ack="ack-grep"
-  alias gvim='UBUNTU_MENUPROXY= gvim'
+  alias open='xdg-open'
 fi
 
 if [[ "$os" == "Darwin" ]]
@@ -23,12 +22,12 @@ alias myip='ifconfig | grep "inet " | cut -d" " -f 2'
 alias mvim2='mvim +vsplit -c ":set lines=999 columns=999" $@'
 alias mvim3='mvim +vsplit +vsplit -c ":set lines=999 columns=999" $@'
 alias rvim='mvim --remote $@'
-alias serve='open http://localhost:8123 && python3 -m http.server 8123'
 alias timestamp='date "+%Y%m%d%H%M%S"'
 alias isotime='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias password="openssl rand -base64 12"
 alias returncode='echo $?'
+alias serve='open http://localhost:8123 && python3 -m http.server 8123'
 
 function swap() {
   mv $1 tmp && mv $2 $1 && mv tmp $2
@@ -94,3 +93,4 @@ function kubectl-staging-logs() {
   kubectl-staging logs `kubectl-staging get pods | grep $1 | cut -d" " -f1`
 }
 
+alias avro-tools="java -jar /usr/share/java/avro-tools-1.8.2.jar"
