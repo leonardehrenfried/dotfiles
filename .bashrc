@@ -87,3 +87,5 @@ export ANDROID_HOME=/usr/local/Cellar/android-sdk/23.0.2/
 export ANDROID_SDK=/usr/local/Cellar/android-sdk/23.0.2/
 
 
+
+source /home/lenni/.config/broot/launcher/bash/br

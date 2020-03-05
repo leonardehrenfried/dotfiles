@@ -23,5 +23,6 @@ bin/awsudo
 .sbt/1.0/mobimeo.sbt
 .sbt/1.0/templates/
 .sbt/1.0/server/
+.sbt/1.0/*
 bin/jenkins-generate
 .sbt/0.13/java9-rt-ext-oracle_corporation_9_0_4/

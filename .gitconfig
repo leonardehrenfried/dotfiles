@@ -1,6 +1,7 @@
 [user]
     name = Leonard Ehrenfried
     email = mail@leonard.io
+    signingkey = 65010A4DB064D6A5192C405D56CCB7F9445717AF
 
 [diff]
     renames=true

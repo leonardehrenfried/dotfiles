@@ -30,6 +30,12 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'jnurmine/Zenburn'
 Plugin 'pearofducks/ansible-vim'
+Plugin 'ncm2/ncm2'
+Plugin 'roxma/nvim-yarp'
+Plugin 'ncm2/ncm2-cssomni'
+Plugin 'ncm2/ncm2-bufword'
+Plugin 'ncm2/ncm2-path'
+Plugin 'wgwoods/vim-systemd-syntax'
 
 call vundle#end()
 
@@ -38,9 +44,6 @@ filetype indent plugin on
 syntax on
 
 let g:acp_enableAtStartup = 0
-let g:neocomplete_enable_at_startup = 1
-"enable only manual complete
-let g:neocomplete_disable_auto_complete = 1
 
 set guicursor=
 
@@ -61,8 +64,6 @@ set incsearch
 " Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
-" search for tags in parent folder
-set tags=tags;/
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
@@ -169,6 +170,8 @@ au BufNewFile,BufRead *.less,*.css nnoremap <buffer> <localleader>S ?{<CR>jV/\v^
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown colorcolumn=79
 autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 colorcolumn=79
 
+autocmd BufNewFile,BufRead *.service setlocal ft=gitconfig
+
 " javascript
 "autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=79
 let javascript_enable_domhtmlcss=1
@@ -198,13 +201,6 @@ iab lenght length
 """"""""""""""""
 
 colorscheme zenburn
-
-"Windows specific
-if has('win32')
- set guifont=Consolas
- colorscheme wombat
- set lines=999 columns=120
-endif
 
 "OS X specific
 if has("gui_macvim")
@@ -245,46 +241,23 @@ nnoremap k gk
 nmap <C-D> "_dd
 imap <C-D> <Esc>"_dd
 
-"moving lines up and down
-nnoremap <C-j> mz:m+<cr>`z
-nnoremap <C-k> mz:m-2<cr>`z
-inoremap <C-j> <C-o>mz<C-o>:m+<cr><C-o>`z
-inoremap <C-k> <C-o>mz<C-o>:m-2<cr><C-o>`z
-vnoremap <C-j> :m'>+<cr>`<my`>mzgv`yo`z
-vnoremap <C-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-"Search mappings: These will make it so that going to the next one in a
-"search will center on the line it's found in.
-map N Nzz
-map n nzz
-"clear search highlighting
-noremap <silent><Leader>/ :nohls<CR>
-
-"tab through windows
-nnoremap <C-Tab> <C-W>W
+nnoremap <C-Right> <C-w><Right>
+nnoremap <C-Left> <C-w><Left>
 
 "close buffer
 nnoremap <C-C> :Bclose<CR>
 
-" cycle through windows
-nnoremap <A-D-Left> :bnext<CR>
-nnoremap <A-D-Right> :bprevious<CR>
-
-"next Tab
-nnoremap <silent> <C-Right> :tabnext<CR>
-"previous Tab
-nnoremap <silent> <C-Left> :tabprevious<CR>
-
 "replace word selected in visual mode
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
-"omnicomplete
-inoremap <expr><C-space> neocomplete#start_manual_complete()
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
 
 "Command-t buffer
 nnoremap tt :FuzzyOpen<CR>
-nnoremap tf :CommandTFlush<CR>
-nnoremap tb :CommandTBuffer<CR>
 
 "NERDTree
 nnoremap nt :NERDTreeToggle<CR><C-W>=
@@ -309,3 +282,5 @@ nmap <silent> [h :GitGutterPrevHunk<CR>]
 cmap w!! w !sudo tee > /dev/null %
 
 com! FormatJSON %!python -m json.tool
+
+let NERDTreeShowHidden=1
