@@ -50,10 +50,7 @@
     autosetuprebase = always
 
 [merge]
-    tool = mvim
-
-[mergetool "mvim"]
-    cmd = mvim -f \"+Gdiff\" $MERGED
+    tool = meld
 
 [mergetool]
     keepBackup = false

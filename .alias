@@ -23,7 +23,7 @@ alias mvim2='mvim +vsplit -c ":set lines=999 columns=999" $@'
 alias mvim3='mvim +vsplit +vsplit -c ":set lines=999 columns=999" $@'
 alias rvim='mvim --remote $@'
 alias timestamp='date "+%Y%m%d%H%M%S"'
-alias isotime='date -u +"%Y-%m-%dT%H:%M:%SZ"'
+alias isotime='date +%Y-%m-%dT%H:%M:%S%z'
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 alias password="openssl rand -base64 12"
 alias returncode='echo $?'
@@ -49,13 +49,6 @@ alias a-decrypt='ansible-vault decrypt --vault-password-file ~/.vault_pass.txt'
 alias a-edit='ansible-vault edit --vault-password-file ~/.vault_pass.txt'
 
 alias kill-sbt-instances='jps | grep sbt-launch.jar | cut -d" " -f 1 | xargs kill -9'
-
-function rssh(){
-  echo "Looking up public IP for EC2 instance named '$1'"
-  IP=`aws ec2 describe-instances --filters "Name=tag:Name,Values=${1}" "Name=instance-state-name,Values=running"| jq .Reservations[0].Instances[0].NetworkInterfaces[0].Association.PublicIp -r`
-  echo "IP for '$1' is $IP"
-  ssh leonard@$IP
-}
 
 function check-port(){
   nc -z $1 $2
