@@ -6,7 +6,7 @@ call vundle#begin()
 " let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'cloudhead/neovim-fuzzy'
+Plugin 'srstevenson/vim-picker'
 Plugin 'Raimondi/delimitMate'
 Plugin 'ap/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
@@ -257,7 +257,7 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
 "Command-t buffer
-nnoremap tt :FuzzyOpen<CR>
+nnoremap tt :PickerEdit<CR>
 
 "NERDTree
 nnoremap nt :NERDTreeToggle<CR><C-W>=
