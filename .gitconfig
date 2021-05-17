@@ -27,7 +27,7 @@
 
 [core]
     editor = nvim
-    filemode = false
+    #filemode = false
     ignorecase = false
     excludesfile = ~/.cvsignore
 
