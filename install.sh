@@ -36,6 +36,7 @@ declare -a dotfiles=(
   .vimrc
   .vim
   .gitconfig
+  #  .gitignore the global ignoresfile is .cvsignore (because of rsync)
   .inputrc
   .profile
   .bashrc

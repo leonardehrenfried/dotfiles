@@ -9,3 +9,5 @@ target
 /*.iml
 /.idea
 npm-debug.log
+*.iml
+pom.xml.versionsBackup
