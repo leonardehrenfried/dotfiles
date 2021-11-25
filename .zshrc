@@ -53,11 +53,10 @@ for i in $lw; do
   source $i &> /dev/null
 done
 
+fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
 
-
-source /home/lenni/.config/broot/launcher/bash/br
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
