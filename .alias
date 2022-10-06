@@ -87,3 +87,4 @@ function kubectl-staging-logs() {
 }
 
 alias avro-tools="java -jar /usr/share/java/avro-tools-1.8.2.jar"
+alias upstream-merge="open "https://github.com/ibi-group/OpenTripPlanner/compare/ibi-dev-2.x...`git branch --show-current`"
