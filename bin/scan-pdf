@@ -1,0 +1,14 @@
+#! /bin/bash
+
+convert \
+  -density 130 \
+  "$1" \
+  -blur 0x0.5 \
+  -sharpen 0x1.0 \
+  -blur 0x0.5 \
+  -attenuate 0.4 +noise Multiplicative \
+  -rotate 0.33 \
+  -attenuate 0.4 +noise Multiplicative \
+  -attenuate 1.1 +noise Gaussian \
+  -colorspace Gray \
+  $1.scanned.pdf
