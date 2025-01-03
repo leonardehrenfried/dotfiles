@@ -1,0 +1,14 @@
+#! /bin/bash -e
+
+git fetch upstream
+git fetch ibi
+
+git checkout ibi-dev-2.x
+git pull
+
+git checkout -b upstream-merge-`date +"%Y-%m-%d"`
+git merge upstream/dev-2.x
+
+git push -u ibi
+
+upstream-merge
